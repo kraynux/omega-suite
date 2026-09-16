@@ -1,0 +1,48 @@
+# Environnement Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.import_linter_cache/
+*.egg-info/
+
+# État runtime généré localement (recréé automatiquement au démarrage) —
+# un sous-dossier DEDIE par outil (var/<outil>/, jamais le var/ par
+# defaut de l'outil lance seul, voir infrastructure/config/paths.py).
+var/*/db/*
+var/*/exports/*
+var/*/screenshots/*
+var/*/*.log
+var/*/*.jsonl
+var/settings.json
+
+# Vendoring genere par build-release.sh (jamais en place dans le depot,
+# uniquement dans l'archive distribuable - voir build-release.sh)
+vendor/
+
+# Archives de release (générées, pas du code source)
+*.tar.gz
+
+# Secrets locaux
+.env
+config.ini
+
+# Éditeurs
+*~
+*.bak
+*.swp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Couverture de tests
+.coverage
+htmlcov/
+
+# Build / packaging
+dist/
+build/
