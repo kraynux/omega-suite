@@ -36,6 +36,7 @@ if TYPE_CHECKING:
     from collections.abc import Callable, Iterable
 
     from textual.screen import Screen
+    from textual.worker import Worker
 
 from omega_lib.terminal.models import RenderProfile
 from omega_lib.theme.policies import TUI_THEMES
@@ -68,6 +69,7 @@ class OmegaSuiteApp(App[None]):
         # de rendu : redemarrage requis pour changer de style).
         self._onglets = current_navigation_style(settings_store=container.settings_store) == "onglets"
         self._patched_tools: set[str] = set()
+        self._patch_workers: dict[str, Worker[None]] = {}
         self._pending_switch_target: str | None = None
         # Seul canal qui survit a la fermeture de l'App (meme patron que
         # PendingInstanceSwitch d'omega-serv) : le profil de rendu et le
@@ -181,14 +183,38 @@ class OmegaSuiteApp(App[None]):
         awaits se chevauchent. Seule la DERNIERE demande enregistree
         est autorisee a appeler `switch_mode()` a la fin de son attente
         - une demande plus ancienne qui se termine apres coup ne fait
-        plus rien (elle sait qu'elle est perimee)."""
+        plus rien (elle sait qu'elle est perimee).
+
+        `_patch_workers` (bug reel constate, 2026-10-16 - "omega-fuzz
+        gele silencieusement, sans message d'erreur") : la meme demande
+        fantome ci-dessus peut aussi arriver pour LE MEME slug (pas
+        seulement un slug different) pendant qu'un premier worker est
+        deja en train d'importer/patcher cet outil - sans ce dict, une
+        SECONDE demande pour "fuzz" lancerait un SECOND worker qui
+        importe/monkey-patche les MEMES classes d'ecran EN PARALLELE du
+        premier (aucun verrou dans `patch_tool_screens`) : deux threads
+        import important simultanement un arbre de modules qui se
+        chevauche est une classe connue, bien que rare, de blocage de
+        l'import CPython - silencieux, sans exception, donc sans le
+        moindre message a l'ecran. Une demande qui trouve deja un worker
+        en vol pour ce slug REUTILISE ce worker au lieu d'en demarrer un
+        second ; l'entree est retiree dans tous les cas (succes ou
+        echec) pour qu'une tentative ULTERIEURE (apres un vrai echec)
+        reparte sur un worker neuf plutot que de rester bloquee sur un
+        resultat perime."""
         if slug == self.current_mode:
             return
         self._pending_switch_target = slug
         if slug != "accueil" and slug not in self._patched_tools:
             self.notify(f"Chargement de {slug.upper()}...", timeout=10)
-            worker = self.run_worker(partial(self._patch_tool_once, slug), thread=True, exclusive=False)
-            await worker.wait()
+            worker = self._patch_workers.get(slug)
+            if worker is None:
+                worker = self.run_worker(partial(self._patch_tool_once, slug), thread=True, exclusive=False)
+                self._patch_workers[slug] = worker
+            try:
+                await worker.wait()
+            finally:
+                self._patch_workers.pop(slug, None)
         if self._pending_switch_target != slug:
             return
         self.switch_mode(slug)
@@ -205,10 +231,26 @@ class OmegaSuiteApp(App[None]):
     def _patch_tool_once(self, slug: str) -> None:
         """Isolation CSS + redirection Quitter (D-015/D-014) - appele une
         seule fois par outil, juste avant sa toute premiere construction
-        reelle (jamais a l'avance pour les 7 : voir `_make_home_screen_factory`)."""
+        reelle (jamais a l'avance pour les 7 : voir `_make_home_screen_factory`).
+
+        `_patched_tools.add(slug)` APRES `patch_tool_screens()` reussi,
+        jamais avant (bug reel constate, 2026-10-16 : "le module
+        omega-fuzz gele le logiciel", vendoring casse - voir
+        build-release.sh) : marquer l'outil comme patche avant meme de
+        savoir si l'import a reussi laissait un import EN ECHEC (ex.
+        `ModuleNotFoundError`) figer silencieusement cet etat pour le
+        reste de la session - toute nouvelle tentative sautait alors le
+        worker d'import (`request_tool_switch` : `slug not in
+        self._patched_tools` devenait faux) et retombait directement sur
+        `switch_mode()`, qui re-appelle `_patch_tool_once` via
+        `_make_home_screen_factory` - lui-meme court-circuite par la
+        garde du dessus, sans jamais re-tenter le patch ni signaler quoi
+        que ce soit de coherent. Si `patch_tool_screens()` leve, l'outil
+        reste desormais absent de `_patched_tools` - une tentative
+        ulterieure refait un essai complet, au lieu de rester bloque dans
+        un etat "pretendument patche" qui ne l'a jamais ete."""
         if slug in self._patched_tools:
             return
-        self._patched_tools.add(slug)
         adapter = self._container.get_adapter(slug)
         patch_tool_screens(
             tool_slug=adapter.slug,
@@ -216,6 +258,7 @@ class OmegaSuiteApp(App[None]):
             profile=self._profile,
             inject_tab_bar=self._onglets,
         )
+        self._patched_tools.add(slug)
 
     def _after_splash(self, _result: None) -> None:
         terminal = self._startup_state.terminal

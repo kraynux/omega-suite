@@ -74,11 +74,24 @@ for pair in "omega-lib:$OMEGA_LIB_SRC" "omega-scan:$OMEGA_SCAN_SRC" "omega-check
             "omega-track:$OMEGA_TRACK_SRC" "omega-fuzz:$OMEGA_FUZZ_SRC"; do
     name="${pair%%:*}"; path="${pair#*:}"
     mkdir -p "$DEST/vendor/$name"
+    # '/tests/' (ANCRE a la racine de CHAQUE outil vendore), jamais 'tests/'
+    # sans le '/' en tete (bug reel constate, 2026-10-16 : "le module
+    # omega-fuzz gele le logiciel") : un motif rsync sans '/' en tete
+    # exclut TOUT repertoire nomme "tests" a n'importe quelle profondeur,
+    # pas seulement le tests/ racine (suite pytest) de chaque outil -
+    # omega-fuzz a un VRAI module metier `domain/tests/` (Test/TestPlan/
+    # TestResult, rien a voir avec pytest) que ce motif non ancre excluait
+    # silencieusement du vendoring, provoquant un ModuleNotFoundError au
+    # premier chargement de l'onglet Fuzz dans la version distribuee
+    # uniquement (jamais reproduit en checkout dev, ou l'import est
+    # editable et pointe directement sur la source). Verifie : aucun des
+    # 6 autres outils n'a de sous-module nomme "tests", seul Fuzz etait
+    # touche par cette collision de nom.
     rsync -a \
         --exclude='.venv/' --exclude='venv/' --exclude='__pycache__/' --exclude='*.pyc' \
         --exclude='.pytest_cache/' --exclude='.mypy_cache/' --exclude='.ruff_cache/' \
         --exclude='.import_linter_cache/' --exclude='*.egg-info/' --exclude='.git/' \
-        --exclude='.claude/' --exclude='docs/assets/' --exclude='var/' --exclude='tests/' \
+        --exclude='.claude/' --exclude='docs/assets/' --exclude='var/' --exclude='/tests/' \
         --exclude='*~' --exclude='*.bak' --exclude='*.swp' \
         --exclude='vendor/' --exclude='build-release.sh' \
         "$path/" "$DEST/vendor/$name/"
