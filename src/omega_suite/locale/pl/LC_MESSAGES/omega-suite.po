@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "zawiera instalację omega-suite"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: katalog odrzucony ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "Ładowanie {upper}..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "Otwórz ustawienia pakietu"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "Otwórz pomoc"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "Wyjdź z omega-suite (z potwierdzeniem)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "WYJDŹ"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "START"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "Pomoc (pakietu na Starcie, narzędzia na karcie)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "Ustawienia pakietu"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "Wyjdź z pakietu (z potwierdzeniem)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "Obserwuje widoczną postawę bezpieczeństwa usługi HTTP/HTTPS: żadnych aktywnych testów."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "Odkrywa cel w kontrolowanym zakresie, a następnie aktywnie testuje jego punkty wejścia - nigdy bez potwierdzenia."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "Analizuje katalog lokalny lub przeszukuje zdalną witrynę z zawsze aktywnymi zabezpieczeniami (głębokość, strony, ta sama domena)."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "Tester obciążenia serwerów."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "Identyfikuje usługi jednego celu (stały skan): nigdy aktywnych testów ani prób uwierzytelnienia."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "Odkrywa i mapuje architekturę wokół celu głównego: nic nie jest skanowane bez wyraźnej akceptacji."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "Obserwuje jawnie zarejestrowane i autoryzowane cele: brak automatycznego odkrywania czy rozszerzania."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "POMOC PAKIETU"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "Nawigacja"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "Każde narzędzie to karta: jej wybór (górny pasek lub przycisk na Starcie) natychmiast pokazuje jego ekrany - stos ekranów każdego narzędzia pozostaje nienaruszony w tle, dopóki nie wyjdziesz z pakietu, nic nie ginie przy zmianie karty."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "Przechowywanie eksportów"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "Każde narzędzie zapisuje własne eksporty w var/<outil>/exports/, a zrzuty ekranu w var/<outil>/screenshots/, względem katalogu, z którego uruchomiono omega-suite (lub w $OMEGA_SUITE_VAR_DIR/<outil>/, jeśli ta zmienna środowiskowa jest ustawiona). Każde narzędzie może zmienić swój katalog docelowy we własnych Ustawieniach. 'Wyczyść wszystkie eksporty' (Ustawienia pakietu) opróżnia ten katalog dla wszystkich 7 narzędzi naraz, także tych nieotwieranych w tej sesji."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "Zakres 7 narzędzi"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "Pierwsze ładowanie narzędzia (karta lub przycisk na Starcie) trwa chwilę, potrzebną na wczytanie go do pamięci - informuje o tym powiadomienie. Kolejne wizyty w tym samym narzędziu przez resztę sesji są natychmiastowe."
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "WYJŚĆ Z OMEGA-SUITE?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "Start (siatka przycisków)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "Karty (stały pasek)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "USTAWIENIA PAKIETU"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "Styl nawigacji (wymagany restart)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "Wyczyść wszystkie eksporty"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "Styl nawigacji"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "URUCHOMIĆ PONOWNIE OMEGA-SUITE?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "Zmieniono {setting_label} - działa dopiero przy uruchomieniu. Zamknąć i ponownie uruchomić omega-suite teraz?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "WYCZYŚCIĆ WSZYSTKIE EKSPORTY?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "Katalog eksportu 7 narzędzi (wybrany w ustawieniach każdego narzędzia) zostanie trwale opróżniony (nic innego nie zostanie zmienione)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "Błąd: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "Wyczyszczono eksporty dla {count} narzędzi(a)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "Wyczyszczono eksporty dla {count} narzędzi(a), {count2} problem(y): {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "Jeden język dla eksportowanych raportów wszystkich 7 narzędzi."

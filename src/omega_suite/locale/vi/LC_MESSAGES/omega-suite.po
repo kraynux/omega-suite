@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "chứa bản cài đặt của omega-suite"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: thư mục bị từ chối ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "Đang tải {upper}..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "Mở thiết lập của bộ công cụ"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "Mở trợ giúp"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "Thoát omega-suite (có xác nhận)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "THOÁT"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "TRANG CHỦ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "Trợ giúp (của bộ công cụ khi ở Trang chủ, của công cụ khi ở một tab)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "Thiết lập bộ công cụ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "Thoát bộ công cụ (có xác nhận)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "Quan sát mức độ bảo mật nhìn thấy được của một dịch vụ HTTP/HTTPS: không kiểm thử chủ động."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "Khám phá mục tiêu trong một phạm vi được kiểm soát rồi chủ động kiểm thử các điểm vào — không bao giờ khi chưa xác nhận."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "Phân tích thư mục cục bộ hoặc thu thập (crawl) trang web từ xa trong các giới hạn an toàn luôn bật (độ sâu, số trang, cùng tên miền)."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "Công cụ kiểm thử tải máy chủ."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "Nhận diện dịch vụ của một mục tiêu duy nhất (quét cố định): không bao giờ kiểm thử chủ động hay thử xác thực."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "Khám phá và lập bản đồ kiến trúc quanh một mục tiêu gốc: không quét gì khi chưa được xác nhận rõ ràng."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "Quan sát các mục tiêu được đăng ký và cho phép rõ ràng: không tự động khám phá hay lan sang mục tiêu khác."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "TRỢ GIÚP BỘ CÔNG CỤ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "Điều hướng"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "Mỗi công cụ là một tab: chọn nó (thanh trên cùng hoặc nút ở Trang chủ) sẽ hiển thị ngay các màn hình riêng của nó — ngăn xếp màn hình của mỗi công cụ được giữ nguyên ở nền cho đến khi thoát bộ công cụ, chuyển tab không làm mất gì."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "Lưu trữ bản xuất"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "Mỗi công cụ ghi bản xuất của mình vào var/<outil>/exports/ và ảnh chụp màn hình vào var/<outil>/screenshots/, tương đối với thư mục nơi khởi chạy omega-suite (hoặc dưới $OMEGA_SUITE_VAR_DIR/<outil>/ nếu biến môi trường này được đặt). Mỗi công cụ có thể đặt lại thư mục đích trong Thiết lập của chính nó. 'Xóa tất cả bản xuất' (Thiết lập bộ công cụ) làm trống thư mục này cho cả 7 công cụ cùng lúc, kể cả những công cụ chưa từng mở trong phiên này."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "Phạm vi của 7 công cụ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "Lần tải đầu tiên của một công cụ (tab hoặc nút ở Trang chủ) mất một chút thời gian để nạp vào bộ nhớ — sẽ có thông báo. Những lần mở sau của cùng công cụ đó, trong suốt phiên làm việc, là tức thì."
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "THOÁT OMEGA-SUITE?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "Trang chủ (lưới nút)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "Tab (thanh cố định)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "THIẾT LẬP BỘ CÔNG CỤ"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "Kiểu điều hướng (cần khởi động lại)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "Xóa tất cả bản xuất"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "Kiểu điều hướng"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "KHỞI ĐỘNG LẠI OMEGA-SUITE?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "Đã thay đổi {setting_label} — chỉ áp dụng khi khởi động. Đóng rồi mở lại omega-suite ngay bây giờ?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "XÓA TẤT CẢ BẢN XUẤT?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "Thư mục xuất của 7 công cụ (thư mục đã chọn trong thiết lập của từng công cụ) sẽ bị làm trống vĩnh viễn (không đụng đến gì khác)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "Lỗi: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "Đã xóa bản xuất của {count} công cụ."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "Đã xóa bản xuất của {count} công cụ, {count2} sự cố: {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "Một ngôn ngữ duy nhất cho báo cáo xuất của cả 7 công cụ."

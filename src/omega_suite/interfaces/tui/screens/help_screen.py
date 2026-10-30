@@ -11,25 +11,33 @@ from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.widgets import Button, Footer, Header, Static
 
+from omega_suite.shared.i18n import _
+
 _SHORTCUTS: tuple[tuple[str, str], ...] = (
-    ("Haut / Bas", "Naviguer entre les elements d'un ecran"),
-    ("Tab / Maj+Tab", "Naviguer entre les champs d'un formulaire"),
-    ("Echap", "Retour a l'ecran precedent (confirmation de sortie sur l'accueil)"),
-    ("t", "Theme suivant (applique immediatement, sans confirmation)"),
-    ("r", "Rafraichir la detection du terminal"),
-    ("a", "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"),
-    ("s", "Reglages de la suite"),
-    ("q", "Quitter la suite (avec confirmation)"),
+    (_("Haut / Bas"), _("Naviguer entre les éléments d'un écran")),
+    (_("Tab / Maj+Tab"), _("Naviguer entre les champs d'un formulaire")),
+    (_("Échap"), _("Retour à l'écran précédent (confirmation de sortie sur l'accueil)")),
+    ("t", _("Thème suivant (appliqué immédiatement, sans confirmation)")),
+    ("r", _("Rafraîchir la détection du terminal")),
+    ("a", _("Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)")),
+    ("s", _("Réglages de la suite")),
+    ("q", _("Quitter la suite (avec confirmation)")),
 )
 
 _TOOL_SCOPES: tuple[tuple[str, str], ...] = (
-    ("Omega-SCAN", "Observe la posture de securite visible d'un service HTTP/HTTPS : aucun test actif."),
-    ("Omega-FUZZ", "Decouvre une cible dans un perimetre controle puis teste activement ses points d'entree - jamais sans confirmation."),
-    ("Omega-FOLD", "Analyse un repertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, meme domaine)."),
-    ("Omega-STRESS", "Testeur de charge de serveur."),
-    ("Omega-CHECK", "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentee."),
-    ("Omega-DEEP", "Decouvre et cartographie l'architecture autour d'une cible racine : rien n'est scanne sans validation explicite."),
-    ("Omega-TRACK", "Observe des cibles explicitement enregistrees et autorisees : aucune decouverte ni derive automatique."),
+    ("Omega-SCAN", _("Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun "
+                     "test actif.")),
+    ("Omega-FUZZ", _("Découvre une cible dans un périmètre contrôlé puis teste activement ses "
+                     "points d'entrée - jamais sans confirmation.")),
+    ("Omega-FOLD", _("Analyse un répertoire local ou crawle un site distant sous des "
+                     "garde-fous toujours actifs (profondeur, pages, même domaine).")),
+    ("Omega-STRESS", _("Testeur de charge de serveur.")),
+    ("Omega-CHECK", _("Identifie les services d'une cible unique (scan fixe) : jamais de test "
+                      "actif ni d'authentification tentée.")),
+    ("Omega-DEEP", _("Découvre et cartographie l'architecture autour d'une cible racine : rien "
+                     "n'est scanné sans validation explicite.")),
+    ("Omega-TRACK", _("Observe des cibles explicitement enregistrées et autorisées : aucune "
+                      "découverte ni dérive automatique.")),
 )
 
 
@@ -37,48 +45,47 @@ class HelpScreen(Screen[None]):
     def compose(self) -> ComposeResult:
         yield Header()
         with VerticalScroll(classes="omega-panel"):
-            yield Static("AIDE DE LA SUITE", classes="omega-title")
+            yield Static(_("AIDE DE LA SUITE"), classes="omega-title")
 
-            yield Static("Raccourcis clavier", classes="omega-subtitle")
+            yield Static(_("Raccourcis clavier"), classes="omega-subtitle")
             for key, description in _SHORTCUTS:
-                yield Static(f"{key:<14} {description}")
+                yield Static(_("{key:<14} {description}").format(key=key, description=description))
             yield Static("")
 
-            yield Static("Navigation", classes="omega-subtitle")
+            yield Static(_("Navigation"), classes="omega-subtitle")
             yield Static(
-                "Chaque outil est un onglet : le choisir (barre du haut ou bouton "
-                "d'Accueil) affiche instantanement ses propres ecrans - la pile "
-                "d'ecrans de chaque outil reste intacte en arriere-plan tant qu'on "
-                "ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+                _("Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) "
+                  "affiche instantanément ses propres écrans - la pile d'écrans de chaque "
+                  "outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien "
+                  "n'est perdu en changeant d'onglet.")
             )
             yield Static("")
 
-            yield Static("Stockage des exports", classes="omega-subtitle")
+            yield Static(_("Stockage des exports"), classes="omega-subtitle")
             yield Static(
-                "Chaque outil ecrit ses propres exports dans var/<outil>/exports/ "
-                "et ses captures d'ecran dans var/<outil>/screenshots/, relatif au "
-                "dossier ou omega-suite a ete lance (ou sous "
-                "$OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement "
-                "est definie). Chaque outil peut redefinir son propre dossier de "
-                "destination depuis ses propres Reglages. 'Vider tous les "
-                "exports' (Reglages de la suite) vide ce dossier pour les 7 "
-                "outils d'un coup, meme ceux jamais ouverts cette session."
+                _("Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses "
+                  "captures d'écran dans var/<outil>/screenshots/, relatif au dossier où "
+                  "omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette "
+                  "variable d'environnement est définie). Chaque outil peut redéfinir son "
+                  "propre dossier de destination depuis ses propres Réglages. 'Vider tous les "
+                  "exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un "
+                  "coup, même ceux jamais ouverts cette session.")
             )
             yield Static("")
 
-            yield Static("Perimetre des 7 outils", classes="omega-subtitle")
+            yield Static(_("Périmètre des 7 outils"), classes="omega-subtitle")
             for name, scope in _TOOL_SCOPES:
                 yield Static(f"[b]{name}[/b]\n{scope}\n")
             yield Static(
-                "Le tout premier chargement d'un outil (onglet ou bouton "
-                "d'Accueil) prend un court instant, le temps de le charger en "
-                "memoire - une notification l'indique. Les visites suivantes de "
-                "ce meme outil, le reste de la session, sont instantanees."
+                _("Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un "
+                  "court instant, le temps de le charger en mémoire - une notification "
+                  "l'indique. Les visites suivantes de ce même outil, le reste de la session, "
+                  "sont instantanées.")
             )
             yield Static("")
 
             with Horizontal(classes="omega-actions"), Container(classes="omega-btn-frame"):
-                yield Button("Retour", id="back")
+                yield Button(_("Retour"), id="back")
         yield Footer()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:

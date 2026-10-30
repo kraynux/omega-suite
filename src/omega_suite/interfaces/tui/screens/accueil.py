@@ -13,6 +13,7 @@ from textual.screen import Screen
 from textual.widgets import Button, Footer, Header
 
 from omega_suite.interfaces.tui.widgets.home_wordmark import HomeWordmark
+from omega_suite.shared.i18n import _
 
 _GRID_ITEMS: tuple[tuple[str, str], ...] = (
     ("scan", "Omega-SCAN"),
@@ -20,14 +21,14 @@ _GRID_ITEMS: tuple[tuple[str, str], ...] = (
     ("fold", "Omega-FOLD"),
     ("stress", "Omega-STRESS"),
     ("check", "Omega-CHECK"),
-    ("settings", "REGLAGES"),
+    ("settings", _("RÉGLAGES")),
     ("deep", "Omega-DEEP"),
-    ("help", "AIDE"),
+    ("help", _("AIDE")),
     ("track", "Omega-TRACK"),
-    ("quit", "QUITTER"),
+    ("quit", _("QUITTER")),
 )
 
-_TOOL_IDS = frozenset({item_id for item_id, _ in _GRID_ITEMS} - {"settings", "help", "quit"})
+_TOOL_IDS = frozenset({item_id for item_id, _ignored in _GRID_ITEMS} - {"settings", "help", "quit"})
 
 
 class AccueilScreen(Screen[None]):
@@ -36,9 +37,9 @@ class AccueilScreen(Screen[None]):
     demande confirmation de sortie, rien "en dessous" de cet ecran."""
 
     BINDINGS: ClassVar[list[BindingType]] = [
-        Binding("escape", "back", "Retour", show=True),
-        Binding("up", "focus_previous_item", "Monter", show=False),
-        Binding("down", "focus_next_item", "Descendre", show=False),
+        Binding("escape", "back", _("Retour"), show=True),
+        Binding("up", "focus_previous_item", _("Monter"), show=False),
+        Binding("down", "focus_next_item", _("Descendre"), show=False),
     ]
 
     def compose(self) -> ComposeResult:
@@ -51,7 +52,7 @@ class AccueilScreen(Screen[None]):
                     for item_id, label in _GRID_ITEMS:
                         with Container(classes="omega-btn-frame"):
                             yield Button(label, id=item_id)
-                grid.border_title = "ACCUEIL"
+                grid.border_title = _("ACCUEIL")
         yield Footer()
 
     async def on_button_pressed(self, event: Button.Pressed) -> None:

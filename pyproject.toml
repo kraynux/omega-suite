@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "omega-suite"
-version = "0.1.0"
+version = "1.5.0"
 description = "Interface unifiee omega-suite : omega-scan/check/deep/fold/stress/track/fuzz en onglets d'une seule application"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -12,13 +12,13 @@ authors = [{ name = "kraynux", email = "kraynux@proton.me" }]
 requires-python = ">=3.10"
 dependencies = [
     "omega-lib>=0.1.0",
-    "omega-scan>=0.1.0",
-    "omega-check>=0.1.0",
-    "omega-deep>=0.1.0",
-    "omega-fold>=0.1.0",
-    "omega-stress>=0.1.0",
-    "omega-track>=0.1.0",
-    "omega-fuzz>=0.1.0",
+    "omega-scan>=2.5.0",
+    "omega-check>=1.5.0",
+    "omega-deep>=1.5.0",
+    "omega-fold>=1.5.0",
+    "omega-stress>=1.5.0",
+    "omega-track>=1.5.0",
+    "omega-fuzz>=1.5.0",
     "textual>=0.60",
 ]
 

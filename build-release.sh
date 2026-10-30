@@ -98,6 +98,22 @@ for pair in "omega-lib:$OMEGA_LIB_SRC" "omega-scan:$OMEGA_SCAN_SRC" "omega-check
 done
 ok "8 dependances vendorees."
 
+# Langues de l'interface et des exports (OMEGA-SUITE_PLAN-DETAILLE_I18N.md, lot N+1) : chaque
+# .po de l'archive (outil, omega-lib vendoree et son catalogue partage) est recompile en .mo
+# depuis sa source - jamais un .mo plus ancien que son .po ; .po et .pot ne sont pas livres.
+if find "$DEST" -name '*.po' -path '*/LC_MESSAGES/*' | grep -q .; then
+    if ! command -v msgfmt > /dev/null; then
+        err "msgfmt introuvable (paquet gettext) : impossible de compiler les langues."
+        exit 1
+    fi
+    info "Compilation des langues..."
+    while IFS= read -r po; do
+        msgfmt --check -o "${po%.po}.mo" "$po" || { err "Catalogue invalide : $po"; exit 1; }
+        rm -f "$po"
+    done < <(find "$DEST" -name '*.po' -path '*/LC_MESSAGES/*')
+    find "$DEST" -name '*.pot' -path '*/locale/*' -delete
+fi
+
 info "Archivage..."
 mkdir -p "$DIST_DIR"
 tar -C "$STAGING_DIR" -czf "$DIST_DIR/$ARCHIVE_NAME" omega-suite

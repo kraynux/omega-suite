@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "يحتوي على تثبيت omega-suite"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: المجلد مرفوض ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "جارٍ تحميل {upper}..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "فتح إعدادات الحزمة"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "فتح المساعدة"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "الخروج من omega-suite (مع تأكيد)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "خروج"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "الرئيسية"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "المساعدة (مساعدة الحزمة من الرئيسية، ومساعدة الأداة من تبويبها)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "إعدادات الحزمة"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "الخروج من الحزمة (مع تأكيد)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "يراقب الوضع الأمني الظاهر لخدمة HTTP/HTTPS: دون أي اختبار نشط."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "يستكشف هدفًا ضمن نطاق مضبوط ثم يختبر نقاط دخوله بنشاط — ولا يفعل ذلك أبدًا دون تأكيد."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "يحلّل مجلدًا محليًا أو يزحف إلى موقع بعيد تحت ضوابط مفعّلة دائمًا (العمق، الصفحات، النطاق نفسه)."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "أداة اختبار تحميل الخوادم."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "يحدّد خدمات هدف واحد (فحص ثابت): لا يُجري أبدًا اختبارًا نشطًا ولا يحاول المصادقة."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "يكتشف البنية حول هدف جذر ويرسم خريطتها: لا يُفحص شيء دون موافقة صريحة."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "يراقب أهدافًا مسجّلة ومصرّحًا بها صراحةً: دون أي اكتشاف أو توسّع تلقائي."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "مساعدة الحزمة"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "التنقّل"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "كل أداة تبويب: اختيارها (الشريط العلوي أو زر في الرئيسية) يعرض شاشاتها الخاصة فورًا — تبقى مجموعة شاشات كل أداة كما هي في الخلفية إلى أن تغادر الحزمة، ولا يضيع شيء عند تبديل التبويب."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "تخزين الصادرات"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "تكتب كل أداة صادراتها في var/<outil>/exports/ ولقطات الشاشة في var/<outil>/screenshots/، نسبةً إلى المجلد الذي شُغّل منه omega-suite (أو تحت $OMEGA_SUITE_VAR_DIR/<outil>/ إن كان متغيّر البيئة هذا معرّفًا). يمكن لكل أداة إعادة تحديد مجلد الوجهة من إعداداتها الخاصة. «إفراغ كل الصادرات» (إعدادات الحزمة) يُفرغ هذا المجلد للأدوات السبع دفعة واحدة، بما فيها تلك التي لم تُفتح في هذه الجلسة."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "نطاق الأدوات السبع"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "يستغرق أول تحميل لأداة (التبويب أو زر الرئيسية) لحظة قصيرة لتحميلها في الذاكرة — يُعلمك إشعار بذلك. تكون الزيارات التالية للأداة نفسها فورية طوال بقية الجلسة."
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "الخروج من OMEGA-SUITE؟"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "الرئيسية (شبكة أزرار)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "تبويبات (شريط دائم)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "إعدادات الحزمة"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "نمط التنقّل (يتطلب إعادة التشغيل)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "إفراغ كل الصادرات"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "نمط التنقّل"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "إعادة تشغيل OMEGA-SUITE؟"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "تم تعديل {setting_label} — لا يُطبَّق إلا عند البدء. هل تريد إغلاق omega-suite وإعادة تشغيله الآن؟"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "إفراغ كل الصادرات؟"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "سيُفرَّغ مجلد التصدير للأدوات السبع (المختار في إعدادات كل أداة) نهائيًا (ولن يُمسّ أي شيء آخر)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "خطأ: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "أُفرغت الصادرات لـ {count} أداة."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "أُفرغت الصادرات لـ {count} أداة، مع {count2} مشكلة: {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "لغة واحدة لتقارير التصدير الخاصة بالأدوات السبع."

@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "bevat de installatie van omega-suite"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: map geweigerd ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "{upper} laden..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "De instellingen van de suite openen"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "De help openen"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "omega-suite afsluiten (met bevestiging)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "AFSLUITEN"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "START"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "Help (die van de suite vanuit Start, die van het hulpmiddel vanuit een tabblad)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "Instellingen van de suite"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "De suite afsluiten (met bevestiging)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "Observeert de zichtbare beveiligingshouding van een HTTP/HTTPS-dienst: geen actieve test."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "Ontdekt een doel binnen een gecontroleerd bereik en test daarna actief de toegangspunten - nooit zonder bevestiging."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "Analyseert een lokale map of crawlt een externe site met altijd actieve waarborgen (diepte, pagina's, zelfde domein)."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "Belastingtester voor servers."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "Identificeert de diensten van één doel (vaste scan): nooit actieve tests of inlogpogingen."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "Ontdekt en brengt de architectuur rond een basisdoel in kaart: niets wordt gescand zonder expliciete goedkeuring."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "Observeert expliciet geregistreerde en toegestane doelen: geen automatische ontdekking of uitbreiding."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "HELP VAN DE SUITE"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "Navigatie"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "Elk hulpmiddel is een tabblad: het kiezen (bovenste balk of knop op Start) toont direct de eigen schermen - de schermstapel van elk hulpmiddel blijft op de achtergrond intact zolang je de suite niet afsluit, er gaat niets verloren bij het wisselen van tabblad."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "Opslag van de exports"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "Elk hulpmiddel schrijft zijn eigen exports naar var/<outil>/exports/ en zijn schermafbeeldingen naar var/<outil>/screenshots/, relatief ten opzichte van de map waaruit omega-suite is gestart (of onder $OMEGA_SUITE_VAR_DIR/<outil>/ als die omgevingsvariabele is ingesteld). Elk hulpmiddel kan zijn eigen doelmap opnieuw instellen in zijn eigen Instellingen. 'Alle exports wissen' (Instellingen van de suite) leegt die map voor de 7 hulpmiddelen tegelijk, ook voor die in deze sessie nooit zijn geopend."
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "Reikwijdte van de 7 hulpmiddelen"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "Het allereerste laden van een hulpmiddel (tabblad of knop op Start) duurt even, de tijd om het in het geheugen te laden - een melding geeft dat aan. Latere bezoeken aan hetzelfde hulpmiddel zijn de rest van de sessie direct."
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "OMEGA-SUITE AFSLUITEN?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "Start (knoppenraster)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "Tabbladen (vaste balk)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "INSTELLINGEN VAN DE SUITE"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "Navigatiestijl (herstart vereist)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "Alle exports wissen"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "Navigatiestijl"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "OMEGA-SUITE OPNIEUW STARTEN?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "{setting_label} gewijzigd - wordt alleen bij het starten toegepast. omega-suite nu sluiten en opnieuw starten?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "ALLE EXPORTS WISSEN?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "De exportmap van de 7 hulpmiddelen (die in de instellingen van elk hulpmiddel is gekozen) wordt definitief geleegd (verder wordt niets aangeraakt)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "Fout: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "Exports gewist voor {count} hulpmiddel(en)."
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "Exports gewist voor {count} hulpmiddel(en), {count2} probleem/problemen: {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "Eén taal voor de geëxporteerde rapporten van de 7 tools."

@@ -84,6 +84,10 @@ cd ~/omega-suite
 ```bash
 suite
 ```
+## Języki interfejsu
+
+Interfejs jest dostępny w 17 językach. Wybór odbywa się w Ustawieniach pakietu („Langue / Language”) i obowiązuje dla wszystkich 7 narzędzi po ponownym uruchomieniu interfejsu; zmienna `OMEGA_SUITE_LANG` wymusza język na czas jednej sesji. Osobne ustawienie, „Język eksportów”, określa język raportów eksportowanych przez 7 narzędzi. W tekstowej konsoli Linuksa (TTY) języki o piśmie niełacińskim są w tej sesji wyświetlane po angielsku. Wiersz poleceń pozostaje po francusku.
+
 ## Zgodność terminali
 
 Interfejs interaktywny (Textual) automatycznie wykrywa możliwości terminala (emulator, rozmiar) i odpowiednio dostosowuje swój strukturalny arkusz stylów (`complete`/`standard`/`reduced`/`mono`), bez ręcznej flagi. Tryb CLI zawsze pozostaje zwykłym tekstem, niezależnym od terminala. Polityka wspólna dla całego pakietu `omega-` (`omega-lib`, `terminal/policies.py`) — identyczna jak w `omega-check`/`omega-fire`.

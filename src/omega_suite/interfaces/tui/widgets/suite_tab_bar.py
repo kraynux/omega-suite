@@ -12,10 +12,12 @@ from __future__ import annotations
 
 from textual.widgets import Tab, Tabs
 
+from omega_suite.shared.i18n import _
+
 # Ordre = ordre de lecture de la grille Accueil (gauche->droite,
 # haut->bas) pour les seuls outils, Accueil ajoute en premier.
 _TAB_ITEMS: tuple[tuple[str, str], ...] = (
-    ("accueil", "ACCUEIL"),
+    ("accueil", _("ACCUEIL")),
     ("scan", "SCAN"),
     ("fuzz", "FUZZ"),
     ("fold", "FOLD"),
@@ -25,7 +27,7 @@ _TAB_ITEMS: tuple[tuple[str, str], ...] = (
     ("track", "TRACK"),
 )
 
-KNOWN_SLUGS = frozenset(slug for slug, _ in _TAB_ITEMS)
+KNOWN_SLUGS = frozenset(slug for slug, _ignored in _TAB_ITEMS)
 """Exporte pour screen_patching.py::wrap_compose_with_tab_bar - seule
 source de verite sur les onglets reellement construits ci-dessous."""
 

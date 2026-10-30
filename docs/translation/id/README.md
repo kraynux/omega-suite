@@ -84,6 +84,10 @@ cd ~/omega-suite
 ```bash
 suite
 ```
+## Bahasa antarmuka
+
+Antarmuka tersedia dalam 17 bahasa. Pilihan dilakukan di Pengaturan suite (“Langue / Language”) dan berlaku untuk ke-7 alat setelah antarmuka dimulai ulang; variabel `OMEGA_SUITE_LANG` memaksakan satu bahasa selama satu sesi. Pengaturan terpisah, “Bahasa ekspor”, menentukan bahasa laporan yang diekspor ke-7 alat. Di konsol teks Linux (TTY), bahasa dengan aksara non-Latin ditampilkan dalam bahasa Inggris selama sesi itu. Baris perintah tetap dalam bahasa Prancis.
+
 ## Kompatibilitas terminal
 
 Antarmuka interaktif (Textual) otomatis mendeteksi kemampuan terminal (emulator, ukuran) dan menyesuaikan lembar gaya strukturalnya (`complete`/`standard`/`reduced`/`mono`), tanpa flag manual. Mode CLI selalu berupa teks biasa, tidak bergantung pada terminal. Kebijakan yang dipakai bersama seluruh suite `omega-` (`omega-lib`, `terminal/policies.py`) — sama dengan milik `omega-check`/`omega-fire`.

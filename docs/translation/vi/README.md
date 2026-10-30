@@ -84,6 +84,10 @@ cd ~/omega-suite
 ```bash
 suite
 ```
+## Ngôn ngữ giao diện
+
+Giao diện có 17 ngôn ngữ. Lựa chọn nằm trong Thiết lập của bộ công cụ (“Langue / Language”) và áp dụng cho cả 7 công cụ sau khi khởi động lại giao diện; biến `OMEGA_SUITE_LANG` buộc dùng một ngôn ngữ trong một phiên. Một thiết lập riêng, “Ngôn ngữ xuất”, quyết định ngôn ngữ của báo cáo do 7 công cụ xuất ra. Trên console văn bản Linux (TTY), các ngôn ngữ không dùng chữ Latinh được hiển thị bằng tiếng Anh trong phiên đó. Dòng lệnh vẫn bằng tiếng Pháp.
+
 ## Khả năng tương thích terminal
 
 Giao diện tương tác (Textual) tự động phát hiện khả năng của terminal (trình giả lập, kích thước) và điều chỉnh bảng kiểu cấu trúc tương ứng (`complete`/`standard`/`reduced`/`mono`), không cần cờ thủ công. Chế độ CLI luôn là văn bản thuần, không phụ thuộc terminal. Chính sách dùng chung cho cả bộ `omega-` (`omega-lib`, `terminal/policies.py`) — giống hệt `omega-check`/`omega-fire`.

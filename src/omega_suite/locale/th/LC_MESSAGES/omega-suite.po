@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "มีการติดตั้ง omega-suite อยู่ภายใน"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: โฟลเดอร์ถูกปฏิเสธ ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "กำลังโหลด {upper}..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "เปิดการตั้งค่าของชุดเครื่องมือ"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "เปิดความช่วยเหลือ"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "ออกจาก omega-suite (มีการยืนยัน)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "ออก"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "หน้าหลัก"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "ความช่วยเหลือ (ของชุดเครื่องมือเมื่ออยู่ที่หน้าหลัก ของเครื่องมือเมื่ออยู่ในแท็บ)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "การตั้งค่าชุดเครื่องมือ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "ออกจากชุดเครื่องมือ (มีการยืนยัน)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "สังเกตสถานะความปลอดภัยที่มองเห็นได้ของบริการ HTTP/HTTPS: ไม่มีการทดสอบเชิงรุก"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "สำรวจเป้าหมายภายในขอบเขตที่ควบคุมแล้วทดสอบจุดเข้าใช้งานเชิงรุก — ไม่ทำโดยไม่มีการยืนยัน"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "วิเคราะห์ไดเรกทอรีในเครื่องหรือ crawl เว็บไซต์ระยะไกลภายใต้ข้อจำกัดความปลอดภัยที่เปิดอยู่เสมอ (ความลึก, จำนวนหน้า, โดเมนเดียวกัน)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "เครื่องมือทดสอบโหลดเซิร์ฟเวอร์"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "ระบุบริการของเป้าหมายเดียว (สแกนแบบคงที่): ไม่ทดสอบเชิงรุกและไม่พยายามยืนยันตัวตน"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "ค้นหาและทำแผนที่สถาปัตยกรรมรอบเป้าหมายราก: ไม่สแกนสิ่งใดโดยไม่มีการยืนยันอย่างชัดเจน"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "สังเกตเป้าหมายที่ลงทะเบียนและได้รับอนุญาตอย่างชัดเจน: ไม่มีการค้นหาหรือขยายไปยังเป้าหมายอื่นโดยอัตโนมัติ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "ความช่วยเหลือของชุดเครื่องมือ"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "การนำทาง"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "เครื่องมือแต่ละตัวคือหนึ่งแท็บ: เมื่อเลือก (แถบด้านบนหรือปุ่มที่หน้าหลัก) หน้าจอของเครื่องมือนั้นจะแสดงทันที — สแต็กหน้าจอของแต่ละเครื่องมือจะคงอยู่ในเบื้องหลังจนกว่าจะออกจากชุดเครื่องมือ การสลับแท็บไม่ทำให้สิ่งใดหายไป"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "ที่เก็บไฟล์ส่งออก"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "เครื่องมือแต่ละตัวเขียนไฟล์ส่งออกของตนลงใน var/<outil>/exports/ และภาพหน้าจอลงใน var/<outil>/screenshots/ โดยอ้างอิงจากโฟลเดอร์ที่เรียกใช้ omega-suite (หรือใต้ $OMEGA_SUITE_VAR_DIR/<outil>/ หากกำหนดตัวแปรสภาพแวดล้อมนี้ไว้) เครื่องมือแต่ละตัวสามารถกำหนดโฟลเดอร์ปลายทางใหม่ได้จากการตั้งค่าของตนเอง 'ล้างไฟล์ส่งออกทั้งหมด' (การตั้งค่าชุดเครื่องมือ) จะล้างโฟลเดอร์นี้ของเครื่องมือทั้ง 7 พร้อมกัน รวมถึงเครื่องมือที่ไม่เคยเปิดในเซสชันนี้"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "ขอบเขตของเครื่องมือทั้ง 7"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "การโหลดเครื่องมือครั้งแรก (แท็บหรือปุ่มที่หน้าหลัก) ใช้เวลาครู่หนึ่งเพื่อโหลดเข้าหน่วยความจำ — จะมีการแจ้งเตือน การเปิดเครื่องมือเดิมครั้งต่อไปตลอดเซสชันจะเกิดขึ้นทันที"
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "ออกจาก OMEGA-SUITE หรือไม่?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "หน้าหลัก (ตารางปุ่ม)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "แท็บ (แถบถาวร)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "การตั้งค่าชุดเครื่องมือ"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "รูปแบบการนำทาง (ต้องเริ่มใหม่)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "ล้างไฟล์ส่งออกทั้งหมด"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "รูปแบบการนำทาง"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "เริ่ม OMEGA-SUITE ใหม่หรือไม่?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "เปลี่ยน {setting_label} แล้ว — มีผลเฉพาะตอนเริ่มต้น ปิดแล้วเปิด omega-suite ใหม่ตอนนี้เลยหรือไม่?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "ล้างไฟล์ส่งออกทั้งหมดหรือไม่?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "โฟลเดอร์ส่งออกของเครื่องมือทั้ง 7 (ที่เลือกไว้ในการตั้งค่าของแต่ละเครื่องมือ) จะถูกล้างอย่างถาวร (ไม่แตะต้องสิ่งอื่น)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "ข้อผิดพลาด: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "ล้างไฟล์ส่งออกของ {count} เครื่องมือแล้ว"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "ล้างไฟล์ส่งออกของ {count} เครื่องมือแล้ว มีปัญหา {count2} รายการ: {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "ใช้ภาษาเดียวกันสำหรับรายงานที่ส่งออกของเครื่องมือทั้ง 7"

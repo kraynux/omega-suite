@@ -83,6 +83,10 @@ cd ~/omega-suite
 ```bash
 suite
 ```
+## 界面语言
+
+界面提供 17 种语言。在套件设置（“Langue / Language”）中选择，界面重启后应用于全部 7 个工具；变量 `OMEGA_SUITE_LANG` 可在一次会话中强制使用某种语言。单独的“导出语言”设置决定 7 个工具导出报告的语言。在 Linux 文本控制台（TTY）上，非拉丁文字的语言在该会话中以英文显示。命令行保持法语。
+
 ## 终端兼容性
 
 交互式界面（Textual）会自动检测终端的能力（模拟器类型、尺寸），并据此调整其结构化样式表（`complete`/`standard`/`reduced`/`mono`），无需任何手动参数。CLI 模式则始终使用纯文本，不依赖终端环境。此策略由整个 `omega-` 套件共用（`omega-lib`、`terminal/policies.py`）——与 `omega-check`/`omega-fire` 完全一致。

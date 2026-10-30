@@ -12,7 +12,7 @@ Alignement (retour utilisateur, 3 rounds - voir aussi
 - Round 2 : tentative de preserver l'indentation D'ORIGINE du fichier
   source (tabulations etendues a 8 colonnes) - a REVELE que cette
   indentation n'etait fiable QUE pour la partie superieure du dessin
-  (boite LINUX SCANNER SUITE, badge V1.0, socle ▄██▄, espaces uniquement
+  (boite LINUX SCANNER SUITE, badge V1.5, socle ▄██▄, espaces uniquement
   dans le fichier) ; la partie inferieure (diagramme reseau, socle bas,
   tagline - ecrite avec des tabulations dans le fichier) ne correspondait
   PAS a un centrage geometrique reel une fois les tabulations etendues -
@@ -67,7 +67,7 @@ def _centered(line: str) -> str:
 
 def _shaded(line: str, default: str = "$foreground") -> str:
     """Colore chaque caractere de degrade selon `_SHADE_COLORS`, le reste
-    (espaces, texte "V1.0", cadres ╠╣) dans `default`."""
+    (espaces, texte "V1.5", cadres ╠╣) dans `default`."""
     return "".join(f"[{_SHADE_COLORS.get(ch, default)}]{ch}[/]" for ch in line)
 
 
@@ -143,7 +143,7 @@ _LINUX_BOX = (
     "└─────────────────────┘",
 )
 
-_BADGE = "░▒▓█V1.0█▓▒░"
+_BADGE = "░▒▓█V1.5█▓▒░"
 
 _OMEGA_BOX = (
     "┌───────────────────────────────────────────────────────────────────────────────────┐",

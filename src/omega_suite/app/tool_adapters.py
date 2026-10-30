@@ -39,7 +39,18 @@ class ToolAdapter:
     """Construit l'ecran d'accueil de l'outil a partir de son conteneur."""
 
 
+def _install_tool_language(package: str) -> None:
+    """Langue de la suite appliquee a l'outil AVANT l'import de ses ecrans (plan i18n Q2) :
+    ses textes traduits au chargement d'un module (raccourcis, titres) naissent ainsi dans la
+    langue de la suite. L'outil lit la langue imposee (omega_lib.i18n.host, fixee par
+    omega_suite/__main__.py), jamais son propre reglage."""
+    import importlib
+
+    importlib.import_module(f"{package}.shared.i18n").LANGUAGE.install(settings_store=None, environ={})
+
+
 def _scan_adapter() -> ToolAdapter:
+    _install_tool_language("omega_scan")
     from omega_scan.app.bootstrap import bootstrap
     from omega_scan.interfaces.tui.screens.home import HomeScreen
 
@@ -52,6 +63,7 @@ def _scan_adapter() -> ToolAdapter:
 
 
 def _check_adapter() -> ToolAdapter:
+    _install_tool_language("omega_check")
     from omega_check.app.bootstrap import bootstrap
     from omega_check.interfaces.tui.screens.home import HomeScreen
 
@@ -64,6 +76,7 @@ def _check_adapter() -> ToolAdapter:
 
 
 def _deep_adapter() -> ToolAdapter:
+    _install_tool_language("omega_deep")
     from omega_deep.app.bootstrap import bootstrap
     from omega_deep.interfaces.tui.screens.home import HomeScreen
 
@@ -76,6 +89,7 @@ def _deep_adapter() -> ToolAdapter:
 
 
 def _fold_adapter() -> ToolAdapter:
+    _install_tool_language("omega_fold")
     from omega_fold.app.bootstrap import bootstrap
     from omega_fold.interfaces.tui.screens.home import HomeScreen
 
@@ -88,6 +102,7 @@ def _fold_adapter() -> ToolAdapter:
 
 
 def _stress_adapter() -> ToolAdapter:
+    _install_tool_language("omega_stress")
     from omega_stress.app.bootstrap import bootstrap
     from omega_stress.interfaces.tui.screens.home import HomeScreen
 
@@ -103,6 +118,7 @@ def _stress_adapter() -> ToolAdapter:
 
 
 def _track_adapter() -> ToolAdapter:
+    _install_tool_language("omega_track")
     from omega_track.app.bootstrap import bootstrap
     from omega_track.interfaces.tui.screens.home import HomeScreen
 
@@ -115,6 +131,7 @@ def _track_adapter() -> ToolAdapter:
 
 
 def _fuzz_adapter() -> ToolAdapter:
+    _install_tool_language("omega_fuzz")
     from omega_fuzz.app.composition_root import build_container, build_tui_scan_runtime
     from omega_fuzz.interfaces.tui.screens.home import HomeScreen
 

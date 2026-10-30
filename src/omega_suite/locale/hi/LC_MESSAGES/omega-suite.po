@@ -1,0 +1,180 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: omega-suite\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Omega-Status: testing\n"
+
+#: src/omega_suite/app/clear_all_exports.py:66
+msgid "contient l'installation d'omega-suite"
+msgstr "इसमें omega-suite की स्थापना है"
+
+#: src/omega_suite/app/clear_all_exports.py:82
+#, python-brace-format
+msgid "{slug} : dossier refusé ({reason}) : {resolve}"
+msgstr "{slug}: फ़ोल्डर अस्वीकृत ({reason}): {resolve}"
+
+#: src/omega_suite/interfaces/tui/app.py:46
+msgid "Ω OMEGA-SUITE"
+msgstr "Ω OMEGA-SUITE"
+
+#: src/omega_suite/interfaces/tui/app.py:214
+#, python-brace-format
+msgid "Chargement de {upper}..."
+msgstr "{upper} लोड हो रहा है..."
+
+#: src/omega_suite/interfaces/tui/app.py:344
+msgid "Ouvrir les réglages de la suite"
+msgstr "सुइट की सेटिंग्स खोलें"
+
+#: src/omega_suite/interfaces/tui/app.py:345
+msgid "Ouvrir l'aide"
+msgstr "सहायता खोलें"
+
+#: src/omega_suite/interfaces/tui/app.py:347
+msgid "Quitter omega-suite (avec confirmation)"
+msgstr "omega-suite से बाहर निकलें (पुष्टि के साथ)"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:28
+msgid "QUITTER"
+msgstr "बाहर निकलें"
+
+#: src/omega_suite/interfaces/tui/screens/accueil.py:55 src/omega_suite/interfaces/tui/widgets/suite_tab_bar.py:20
+msgid "ACCUEIL"
+msgstr "होम"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
+msgstr "सहायता (होम पर सुइट की, टैब में उस टूल की)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+msgid "Réglages de la suite"
+msgstr "सुइट की सेटिंग्स"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+msgid "Quitter la suite (avec confirmation)"
+msgstr "सुइट से बाहर निकलें (पुष्टि के साथ)"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
+msgstr "किसी HTTP/HTTPS सेवा की दिखाई देने वाली सुरक्षा स्थिति का अवलोकन करता है: कोई सक्रिय परीक्षण नहीं।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
+msgstr "नियंत्रित दायरे में लक्ष्य को खोजता है, फिर उसके प्रवेश बिंदुओं का सक्रिय परीक्षण करता है — बिना पुष्टि के कभी नहीं।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
+msgstr "हमेशा चालू सुरक्षा सीमाओं (गहराई, पेज, वही डोमेन) के तहत किसी स्थानीय डायरेक्टरी का विश्लेषण करता है या किसी दूरस्थ साइट को क्रॉल करता है।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+msgid "Testeur de charge de serveur."
+msgstr "सर्वर लोड परीक्षण उपकरण।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
+msgstr "किसी एक लक्ष्य की सेवाओं की पहचान करता है (निश्चित स्कैन): कभी कोई सक्रिय परीक्षण या प्रमाणीकरण का प्रयास नहीं।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
+msgstr "मूल लक्ष्य के आसपास की संरचना खोजता और उसका नक्शा बनाता है: स्पष्ट स्वीकृति के बिना कुछ भी स्कैन नहीं होता।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
+msgstr "स्पष्ट रूप से दर्ज और अधिकृत लक्ष्यों का अवलोकन करता है: कोई स्वचालित खोज या दूसरे लक्ष्यों तक विस्तार नहीं।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+msgid "AIDE DE LA SUITE"
+msgstr "सुइट की सहायता"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+msgid "Navigation"
+msgstr "नेविगेशन"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
+msgstr "हर टूल एक टैब है: उसे चुनने पर (ऊपर की पट्टी या होम का बटन) उसकी अपनी स्क्रीनें तुरंत दिखती हैं — सुइट से बाहर निकलने तक हर टूल का स्क्रीन-स्टैक पृष्ठभूमि में वैसा ही रहता है, टैब बदलने पर कुछ नहीं खोता।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+msgid "Stockage des exports"
+msgstr "निर्यात का भंडारण"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
+msgstr "हर टूल अपने निर्यात var/<outil>/exports/ में और स्क्रीनशॉट var/<outil>/screenshots/ में लिखता है, उस फ़ोल्डर के सापेक्ष जहाँ से omega-suite चलाया गया (या $OMEGA_SUITE_VAR_DIR/<outil>/ के नीचे, यदि यह पर्यावरण चर सेट है)। हर टूल अपनी सेटिंग्स से अपना गंतव्य फ़ोल्डर बदल सकता है। 'सभी निर्यात खाली करें' (सुइट की सेटिंग्स) सातों टूल के लिए यह फ़ोल्डर एक साथ खाली करता है, उन टूल के लिए भी जो इस सत्र में कभी खोले नहीं गए।"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+msgid "Périmètre des 7 outils"
+msgstr "7 टूल का दायरा"
+
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
+msgstr "किसी टूल को पहली बार लोड करने में (टैब या होम का बटन) उसे मेमोरी में लाने के लिए थोड़ा समय लगता है — एक सूचना यह बताती है। बाकी सत्र में उसी टूल पर अगली बार जाना तुरंत होता है।"
+
+#: src/omega_suite/interfaces/tui/screens/quit_confirm.py:17
+msgid "QUITTER OMEGA-SUITE ?"
+msgstr "OMEGA-SUITE से बाहर निकलें?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Accueil (grille de boutons)"
+msgstr "होम (बटनों का ग्रिड)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:34
+msgid "Onglets (barre persistante)"
+msgstr "टैब (स्थायी पट्टी)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:46
+msgid "RÉGLAGES DE LA SUITE"
+msgstr "सुइट की सेटिंग्स"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:65
+msgid "Style de navigation (redémarrage requis)"
+msgstr "नेविगेशन शैली (पुनः आरंभ आवश्यक)"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:77
+msgid "Vider tous les exports"
+msgstr "सभी निर्यात खाली करें"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:101
+msgid "Style de navigation"
+msgstr "नेविगेशन शैली"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:114
+msgid "REDÉMARRER OMEGA-SUITE ?"
+msgstr "OMEGA-SUITE फिर से शुरू करें?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:116
+#, python-brace-format
+msgid "{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis relancer omega-suite tout de suite ?"
+msgstr "{setting_label} बदला गया — यह केवल शुरुआत में लागू होता है। omega-suite को अभी बंद करके फिर से चलाएँ?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:149
+msgid "VIDER TOUS LES EXPORTS ?"
+msgstr "सभी निर्यात खाली करें?"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:151
+msgid "Le dossier d'export des 7 outils (celui choisi dans les réglages de chaque outil) sera définitivement vidé (rien d'autre n'est touché)."
+msgstr "7 टूल का निर्यात फ़ोल्डर (हर टूल की सेटिंग्स में चुना गया) स्थायी रूप से खाली कर दिया जाएगा (और कुछ नहीं छुआ जाएगा)।"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:171
+#, python-brace-format
+msgid "Erreur : {exc}"
+msgstr "त्रुटि: {exc}"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:177
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s)."
+msgstr "{count} टूल के निर्यात खाली किए गए।"
+
+#: src/omega_suite/interfaces/tui/screens/settings_screen.py:181
+#, python-brace-format
+msgid "Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}"
+msgstr "{count} टूल के निर्यात खाली किए गए, {count2} समस्याएँ: {shown}"
+
+#: src/omega_suite/interfaces/tui/language_setting.py:65
+msgid "Une seule langue pour les rapports exportés des 7 outils."
+msgstr "सातों टूल की निर्यात रिपोर्टों के लिए एक ही भाषा।"

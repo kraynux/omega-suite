@@ -14,7 +14,7 @@ from textual.containers import Container, Horizontal, Vertical
 from textual.screen import Screen
 from textual.widgets import Button, Footer, Header, Select, Static
 
-from omega_suite.app.clear_all_exports import clear_all_exports
+from omega_suite.app.clear_all_exports import ClearAllResult, clear_all_exports
 from omega_suite.app.select_navigation_style import (
     NavigationStyle,
     current_navigation_style,
@@ -22,14 +22,16 @@ from omega_suite.app.select_navigation_style import (
 )
 from omega_suite.app.select_render_profile import select_render_profile
 from omega_suite.app.select_theme import UnknownThemeError, select_theme
+from omega_suite.interfaces.tui.language_setting import LanguageSetting
 from omega_suite.interfaces.tui.screens.confirm import ConfirmScreen
+from omega_suite.shared.i18n import _
 
 if TYPE_CHECKING:
     from omega_suite.app.dependency_container import DependencyContainer
 
 _AUTO = "auto"
 _RENDER_PROFILE_OVERRIDE_KEY = "render_profile_override"
-_NAVIGATION_CHOICES = (("Accueil (grille de boutons)", "accueil"), ("Onglets (barre persistante)", "onglets"))
+_NAVIGATION_CHOICES = ((_("Accueil (grille de boutons)"), "accueil"), (_("Onglets (barre persistante)"), "onglets"))
 
 
 class SettingsScreen(Screen[None]):
@@ -41,9 +43,9 @@ class SettingsScreen(Screen[None]):
         store = self._container.settings_store
         yield Header()
         with Vertical(classes="omega-form-panel"):
-            yield Static("REGLAGES DE LA SUITE", classes="omega-title")
+            yield Static(_("RÉGLAGES DE LA SUITE"), classes="omega-title")
 
-            yield Static("Theme", classes="omega-subtitle")
+            yield Static(_("Thème"), classes="omega-subtitle")
             yield Select(
                 [(name, name) for name in TUI_THEMES],
                 value=self.app.theme,
@@ -51,16 +53,16 @@ class SettingsScreen(Screen[None]):
                 id="theme-select",
             )
 
-            yield Static("Profil de rendu (redemarrage requis)", classes="omega-subtitle")
+            yield Static(_("Profil de rendu (redémarrage requis)"), classes="omega-subtitle")
             current_override = store.get(_RENDER_PROFILE_OVERRIDE_KEY, "")
             yield Select(
-                [("Automatique", _AUTO)] + [(p.value, p.value) for p in RenderProfile],
+                [(_("Automatique"), _AUTO)] + [(p.value, p.value) for p in RenderProfile],
                 value=current_override or _AUTO,
                 allow_blank=False,
                 id="render-profile-select",
             )
 
-            yield Static("Style de navigation (redemarrage requis)", classes="omega-subtitle")
+            yield Static(_("Style de navigation (redémarrage requis)"), classes="omega-subtitle")
             yield Select(
                 _NAVIGATION_CHOICES,
                 value=current_navigation_style(settings_store=store),
@@ -68,12 +70,14 @@ class SettingsScreen(Screen[None]):
                 id="navigation-style-select",
             )
 
-            yield Static("Purge", classes="omega-subtitle")
+            yield LanguageSetting(store)
+
+            yield Static(_("Purge"), classes="omega-subtitle")
             with Horizontal(classes="omega-actions"), Container(classes="omega-btn-frame"):
-                yield Button("Vider tous les exports", id="clear-all-exports", variant="error")
+                yield Button(_("Vider tous les exports"), id="clear-all-exports", variant="error")
 
             with Horizontal(classes="omega-actions"), Container(classes="omega-btn-frame"):
-                yield Button("Retour", id="back")
+                yield Button(_("Retour"), id="back")
         yield Footer()
 
     def on_select_changed(self, event: Select.Changed) -> None:
@@ -94,7 +98,7 @@ class SettingsScreen(Screen[None]):
                 return
             new_style: NavigationStyle = "onglets" if str(event.value) == "onglets" else "accueil"
             select_navigation_style(settings_store=self._container.settings_store, style=new_style)
-            self._offer_restart("Style de navigation")
+            self._offer_restart(_("Style de navigation"))
 
     def _offer_restart(self, setting_label: str) -> None:
         """Le reglage est deja ecrit (appelant) - ne demande qu'a relancer
@@ -107,10 +111,10 @@ class SettingsScreen(Screen[None]):
         que le processus ne soit remplace."""
         self.app.push_screen(
             ConfirmScreen(
-                title="REDEMARRER OMEGA-SUITE ?",
+                title=_("REDÉMARRER OMEGA-SUITE ?"),
                 message=(
-                    f"{setting_label} modifie - ne s'applique qu'au demarrage. "
-                    "Fermer puis relancer omega-suite tout de suite ?"
+                    _("{setting_label} modifié - ne s'applique qu'au démarrage. Fermer puis "
+                      "relancer omega-suite tout de suite ?").format(setting_label=setting_label)
                 ),
             ),
             self._restart_if_confirmed,
@@ -118,7 +122,7 @@ class SettingsScreen(Screen[None]):
 
     def _restart_if_confirmed(self, confirmed: bool | None) -> None:
         if not confirmed:
-            self.app.notify("Applique au prochain demarrage.")
+            self.app.notify(_("Appliqué au prochain démarrage."))
             return
         self.app.pending_restart = True  # type: ignore[attr-defined]
         self.app.exit()
@@ -134,7 +138,7 @@ class SettingsScreen(Screen[None]):
     def _apply_render_profile(self, value: str) -> None:
         profile = None if value == _AUTO else RenderProfile(value)
         select_render_profile(settings_store=self._container.settings_store, render_profile=profile)
-        self._offer_restart("Profil de rendu")
+        self._offer_restart(_("Profil de rendu"))
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "back":
@@ -142,10 +146,10 @@ class SettingsScreen(Screen[None]):
         elif event.button.id == "clear-all-exports":
             self.app.push_screen(
                 ConfirmScreen(
-                    title="VIDER TOUS LES EXPORTS ?",
+                    title=_("VIDER TOUS LES EXPORTS ?"),
                     message=(
-                        "Le dossier d'export des 7 outils sera definitivement vide "
-                        "(rien d'autre n'est touche)."
+                        _("Le dossier d'export des 7 outils (celui choisi dans les réglages de "
+                          "chaque outil) sera définitivement vidé (rien d'autre n'est touché).")
                     ),
                 ),
                 self._clear_all_exports_if_confirmed,
@@ -154,9 +158,26 @@ class SettingsScreen(Screen[None]):
     def _clear_all_exports_if_confirmed(self, confirmed: bool | None) -> None:
         if not confirmed:
             return
-        # get_all_tool_containers() (pas .tool_containers) : cette action
-        # doit vider les exports des 7 outils meme ceux jamais ouverts
-        # cette session (construction paresseuse, dependency_container.py)
-        # - seule action de la suite ou payer ce cout une fois est justifie.
-        cleared = clear_all_exports(self._container.get_all_tool_containers())
-        self.app.notify(f"Exports vides pour {len(cleared)} outil(s).")
+        self.app.notify(_("Suppression en cours..."), timeout=3)
+        # Dans un thread : get_all_tool_containers() construit les 7 outils jamais
+        # ouverts cette session et les dossiers peuvent etre gros - l'interface ne doit
+        # jamais se figer pendant ce temps (correctif 2026-10-27).
+        self.run_worker(self._clear_all_in_thread, thread=True, exclusive=True)
+
+    def _clear_all_in_thread(self) -> None:
+        try:
+            result = clear_all_exports(self._container.get_all_tool_containers(), self._container.var_dir.parent)
+        except OSError as exc:
+            self.app.call_from_thread(self.app.notify, _("Erreur : {exc}").format(exc=exc), severity="error", timeout=10)
+            return
+        self.app.call_from_thread(self._on_all_cleared, result)
+
+    def _on_all_cleared(self, result: ClearAllResult) -> None:
+        if not result.problems:
+            self.app.notify(_("Exports vidés pour {count} outil(s).").format(count=len(result.cleared)))
+            return
+        shown = " ; ".join(result.problems[:3]) + (" ..." if len(result.problems) > 3 else "")
+        self.app.notify(
+            _("Exports vidés pour {count} outil(s), {count2} problème(s) : {shown}").format(count=len(result.cleared), count2=len(result.problems), shown=shown),
+            severity="warning", timeout=15,
+        )

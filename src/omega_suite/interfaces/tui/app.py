@@ -18,6 +18,7 @@ from textual.binding import Binding, BindingType
 from omega_suite.app.dependency_container import DependencyContainer
 from omega_suite.app.select_navigation_style import current_navigation_style
 from omega_suite.app.select_theme import UnknownThemeError, select_theme
+from omega_suite.interfaces.tui.language_setting import notify_language_at_startup
 from omega_suite.interfaces.tui.rendering.textual_theme_builder import build_all_textual_themes
 from omega_suite.interfaces.tui.screen_patching import (
     patch_tool_screens,
@@ -31,6 +32,7 @@ from omega_suite.interfaces.tui.screens.settings_screen import SettingsScreen
 from omega_suite.interfaces.tui.screens.splash import SplashScreen
 from omega_suite.interfaces.tui.screens.terminal_warning import TerminalWarningScreen
 from omega_suite.interfaces.tui.startup import resolve_startup_state
+from omega_suite.shared.i18n import _
 
 if TYPE_CHECKING:
     from collections.abc import Callable, Iterable
@@ -41,7 +43,7 @@ if TYPE_CHECKING:
 from omega_lib.terminal.models import RenderProfile
 from omega_lib.theme.policies import TUI_THEMES
 
-TITLE = "Ω OMEGA-SUITE"
+TITLE = _("Ω OMEGA-SUITE")
 _STYLES_DIR = Path(__file__).parent / "styles"
 
 
@@ -51,12 +53,12 @@ class OmegaSuiteApp(App[None]):
 
     TITLE = TITLE
     BINDINGS: ClassVar[list[BindingType]] = [
-        Binding("q", "quit", "Quitter", show=True),
-        Binding("ctrl+q", "quit", "Quitter", show=False),
-        Binding("t", "cycle_theme", "Theme suivant", show=True),
-        Binding("r", "refresh_terminal", "Rafraichir", show=True),
-        Binding("a", "help", "Aide", show=True),
-        Binding("s", "reglages", "Reglages", show=True),
+        Binding("q", "quit", _("Quitter"), show=True),
+        Binding("ctrl+q", "quit", _("Quitter"), show=False),
+        Binding("t", "cycle_theme", _("Thème suivant"), show=True),
+        Binding("r", "refresh_terminal", _("Rafraîchir"), show=True),
+        Binding("a", "help", _("Aide"), show=True),
+        Binding("s", "reglages", _("Réglages"), show=True),
     ]
 
     def __init__(self, container: DependencyContainer) -> None:
@@ -82,6 +84,8 @@ class OmegaSuiteApp(App[None]):
         # APRES que `App.run()` soit revenu (Textual entierement arrete,
         # terminal restaure).
         self.pending_restart = False
+        self.pending_language: str | None = None
+        """Langue choisie dans les Reglages : imposee aux 7 outils au redemarrage (Q2)."""
 
         # Patcher les 7 outils ICI (bug reel constate - "5 secondes au
         # demarrage") forcerait a IMPORTER tous les ecrans des 7 outils
@@ -153,6 +157,7 @@ class OmegaSuiteApp(App[None]):
         # l'utilisateur y va (voir `_make_home_screen_factory`).
         for slug in self._container.adapter_factories:
             self.add_mode(slug, self._make_home_screen_factory(slug))
+        notify_language_at_startup(self)
         self.push_screen(SplashScreen(), self._after_splash)
 
     async def request_tool_switch(self, slug: str) -> None:
@@ -206,7 +211,7 @@ class OmegaSuiteApp(App[None]):
             return
         self._pending_switch_target = slug
         if slug != "accueil" and slug not in self._patched_tools:
-            self.notify(f"Chargement de {slug.upper()}...", timeout=10)
+            self.notify(_("Chargement de {upper}...").format(upper=slug.upper()), timeout=10)
             worker = self._patch_workers.get(slug)
             if worker is None:
                 worker = self.run_worker(partial(self._patch_tool_once, slug), thread=True, exclusive=False)
@@ -265,9 +270,7 @@ class OmegaSuiteApp(App[None]):
         too_small = terminal.signals.columns < 80 or terminal.signals.rows < 24
         if terminal.render_profile == RenderProfile.MONO or too_small:
             message = (
-                f"Terminal detecte : {terminal.signals.family} "
-                f"({terminal.signals.columns}x{terminal.signals.rows}). "
-                f"Rendu applique : {terminal.render_profile.value}."
+                _("Terminal détecté : {family} ({columns}x{rows}). Rendu appliqué : {value}.").format(family=terminal.signals.family, columns=terminal.signals.columns, rows=terminal.signals.rows, value=terminal.render_profile.value)
             )
             self.push_screen(TerminalWarningScreen(message=message), self._show_accueil)
         else:
@@ -278,7 +281,7 @@ class OmegaSuiteApp(App[None]):
 
     def watch_theme(self, _theme_name: str) -> None:
         terminal = self._startup_state.terminal
-        self.sub_title = f"{self.theme} | {terminal.signals.columns}x{terminal.signals.rows}"
+        self.sub_title = _("{theme} | {columns}x{rows}").format(theme=self.theme, columns=terminal.signals.columns, rows=terminal.signals.rows)
 
     async def action_quit(self) -> None:
         self.push_screen(QuitConfirmScreen(), self._quit_if_confirmed)
@@ -297,7 +300,7 @@ class OmegaSuiteApp(App[None]):
             self.notify(str(exc), severity="error")
             return
         except OSError as exc:
-            self.notify(f"Theme applique mais non enregistre : {exc}", severity="warning")
+            self.notify(_("Thème appliqué mais non enregistré : {exc}").format(exc=exc), severity="warning")
         self.theme = next_name
 
     def action_refresh_terminal(self) -> None:
@@ -308,10 +311,10 @@ class OmegaSuiteApp(App[None]):
 
         terminal = resolve_render_profile(SystemTerminalDetector().detect())
         self._startup_state = StartupState(terminal=terminal, theme=self._startup_state.theme)
-        self.sub_title = f"{self.theme} | {terminal.signals.columns}x{terminal.signals.rows}"
+        self.sub_title = _("{theme} | {columns}x{rows}").format(theme=self.theme, columns=terminal.signals.columns, rows=terminal.signals.rows)
         self.notify(
-            f"{terminal.signals.family} ({terminal.signals.columns}x{terminal.signals.rows})",
-            title="Terminal rafraichi",
+            _("{family} ({columns}x{rows})").format(family=terminal.signals.family, columns=terminal.signals.columns, rows=terminal.signals.rows),
+            title=_("Terminal rafraîchi"),
         )
 
     def action_help(self) -> None:
@@ -337,15 +340,15 @@ class OmegaSuiteApp(App[None]):
         a un outil (raccourcis de navigation TRACK, etc.) ne sont pas
         reproduits ici, deliberement - restent atteignables depuis le menu
         de l'onglet concerne."""
-        yield SystemCommand("Theme", "Changer le theme actif", self.action_change_theme)
-        yield SystemCommand("Reglages", "Ouvrir les reglages de la suite", self.action_reglages)
-        yield SystemCommand("Aide", "Ouvrir l'aide", self.action_help)
+        yield SystemCommand(_("Thème"), _("Changer le thème actif"), self.action_change_theme)
+        yield SystemCommand(_("Réglages"), _("Ouvrir les réglages de la suite"), self.action_reglages)
+        yield SystemCommand(_("Aide"), _("Ouvrir l'aide"), self.action_help)
         yield SystemCommand(
-            "Quitter", "Quitter omega-suite (avec confirmation)", self.action_quit
+            _("Quitter"), _("Quitter omega-suite (avec confirmation)"), self.action_quit
         )
         yield SystemCommand(
-            "Capture d'ecran",
-            "Enregistrer une capture SVG de l'ecran courant",
+            _("Capture d'écran"),
+            _("Enregistrer une capture SVG de l'écran courant"),
             self._deliver_screenshot_for_active_tool,
         )
 
@@ -369,7 +372,7 @@ class OmegaSuiteApp(App[None]):
         )
         self.notify(
             str(error) or type(error).__name__,
-            title="Erreur inattendue",
+            title=_("Erreur inattendue"),
             severity="error",
             timeout=10,
         )
