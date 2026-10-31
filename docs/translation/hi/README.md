@@ -8,8 +8,7 @@
 
 **सभी "OMEGA" स्कैनर एक ही इंटरफ़ेस और एक साझा लाइब्रेरी में एकीकृत**
 
-> **kraynux** द्वारा **Omega-server** के लिए विकसित 
-[kraynux.snake-mackarel](https://kraynux.snake-mackarel.ts.net)
+> [kraynux](https://github.com/kraynux) द्वारा [Omega-Server](https://kraynux.snake-mackarel.ts.net) के लिए विकसित   
 
 आधिकारिक पेज: [OMEGA-SUITE](https://kraynux.snake-mackarel.ts.net/omega-suite/) &nbsp;   
 स्क्रीनशॉट → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/screenshots/) · [omega-check](https://kraynux.snake-mackarel.ts.net/omega-check/screenshots/) · [omega-deep](https://kraynux.snake-mackarel.ts.net/omega-deep/screenshots/) · [omega-fold](https://kraynux.snake-mackarel.ts.net/omega-fold/screenshots/) · [omega-track](https://kraynux.snake-mackarel.ts.net/omega-track/screenshots/) · [omega-fuzz](https://kraynux.snake-mackarel.ts.net/omega-fuzz/screenshots/) · [omega-stress](https://kraynux.snake-mackarel.ts.net/omega-stress/screenshots/) 
