@@ -26,6 +26,13 @@ Screenshots → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/sc
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) et [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 reunis dans une seule application TUI (grille d'Accueil ou barre d'onglets persistante, selon le choix de l'utilisateur) avec une bibliotheque partagee [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/assets/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/assets/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/assets/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/assets/omega-suite/D.png" width="24%" />
+</p>
+
 
 Chaque outil reste executable de facon autonome (`omega-check scan ...`
 fonctionne toujours) - omega-suite est une facade additionnelle, pas un
@@ -86,6 +93,10 @@ suite
 ## Langues de l'interface
 
 L'interface est disponible en 17 langues. Le choix se fait dans les Réglages de la suite (« Langue / Language ») et s'applique aux 7 outils après un redémarrage de l'interface ; la variable `OMEGA_SUITE_LANG` permet de forcer une langue le temps d'une session. Un réglage séparé, « Langue des exports », fixe la langue des rapports exportés par les 7 outils. Sur une console texte Linux (TTY), les langues à écriture non latine s'affichent en anglais pour la session. La ligne de commande reste en français.
+
+## Contact et support
+
+L'aide (touche `a`) propose un écran **Contact et support** : *Payer un café* (page PayPal du développeur), *Contacter le support* (adresse mail et formulaire de contact du site, affichés en clair), *Se déclarer utilisateur (anonyme)* et *Vérifier les mises à jour*. La déclaration est volontaire, désactivée par défaut et envoyée une seule fois : elle sert seulement à compter les utilisateurs et, si on le souhaite, leur continent ou leur pays (listes fermées, jamais de texte libre). Elle envoie une clé tirée au hasard, le nom du logiciel (`omega-suite`) et sa version ; jamais de nom, de nom de machine, de réglage, de cible ni de résultat. L'adresse IP n'est pas enregistrée dans les déclarations, mais passe, comme toute visite, par les contrôles de sécurité et le journal du serveur de réception. Retrait à tout moment depuis le même écran (*Ne plus me déclarer*). La vérification des mises à jour lit seulement la liste des versions publiées sur le site, et jamais sans clic. Dans la suite, une seule déclaration, `omega-suite`, depuis l'Accueil comme depuis l'aide d'un onglet ; un outil lancé seul se déclare sous son propre nom.
 
 ## Compatibilité terminaux
 

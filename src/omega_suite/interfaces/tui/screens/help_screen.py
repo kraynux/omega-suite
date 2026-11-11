@@ -11,6 +11,7 @@ from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.widgets import Button, Footer, Header, Static
 
+from omega_suite.interfaces.tui.screens.contact_support import contact_support_screen
 from omega_suite.shared.i18n import _
 
 _SHORTCUTS: tuple[tuple[str, str], ...] = (
@@ -42,6 +43,12 @@ _TOOL_SCOPES: tuple[tuple[str, str], ...] = (
 
 
 class HelpScreen(Screen[None]):
+    def __init__(self, *, container: object | None = None) -> None:
+        super().__init__()
+        # Contact et support (D-016, 2026-11-09) : declaration « omega-suite », services prepares
+        # par le conteneur de la suite ; absents (bouton masque) sans conteneur.
+        self._contact_support = getattr(container, "contact_support", None)
+
     def compose(self) -> ComposeResult:
         yield Header()
         with VerticalScroll(classes="omega-panel"):
@@ -84,10 +91,16 @@ class HelpScreen(Screen[None]):
             )
             yield Static("")
 
-            with Horizontal(classes="omega-actions"), Container(classes="omega-btn-frame"):
-                yield Button(_("Retour"), id="back")
+            with Horizontal(classes="omega-actions"):
+                if self._contact_support is not None:
+                    with Container(classes="omega-btn-frame"):
+                        yield Button(_("Contact et support"), id="contact-support", variant="primary")
+                with Container(classes="omega-btn-frame"):
+                    yield Button(_("Retour"), id="back")
         yield Footer()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "back":
             self.dismiss()
+        elif event.button.id == "contact-support" and self._contact_support is not None:
+            self.app.push_screen(contact_support_screen(self._contact_support))

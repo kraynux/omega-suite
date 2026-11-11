@@ -26,6 +26,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
+from omega_lib.ports.declaration import ContactSupportServices
+
 from omega_suite.infrastructure.config import paths
 from omega_suite.ports.settings_store import SettingsStore
 
@@ -40,6 +42,9 @@ class DependencyContainer:
     var_dir: Path
     _adapter_cache: dict[str, ToolAdapter] = field(default_factory=dict, repr=False)
     _tool_container_cache: dict[str, Any] = field(default_factory=dict, repr=False)
+    contact_support: ContactSupportServices | None = None
+    """Contact et support (omega-lib, D-016, 2026-11-09) : declaration « omega-suite », la seule de
+    la suite, ouverte aussi depuis l'aide de chaque onglet (var/declaration.json de la suite)."""
 
     def get_adapter(self, slug: str) -> ToolAdapter:
         """Construit (une seule fois, mise en cache) le `ToolAdapter` de

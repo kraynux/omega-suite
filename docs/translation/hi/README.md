@@ -26,6 +26,13 @@
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) और [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 एक ही TUI एप्लिकेशन में एकत्रित (उपयोगकर्ता की पसंद के अनुसार होम ग्रिड या स्थायी टैब बार), एक साझा लाइब्रेरी [(`omega-lib`)](https://github.com/kraynux/omega-lib) के साथ।
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/hi/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/hi/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/hi/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/hi/omega-suite/D.png" width="24%" />
+</p>
+
 
 हर टूल अब भी स्वतंत्र रूप से चलाया जा सकता है (`omega-check scan ...`
 अब भी काम करता है) - omega-suite एक अतिरिक्त अग्रभाग है, कोई
@@ -86,6 +93,10 @@ suite
 ## इंटरफ़ेस की भाषाएँ
 
 इंटरफ़ेस 17 भाषाओं में उपलब्ध है। चुनाव सुइट की सेटिंग्स (“Langue / Language”) में होता है और इंटरफ़ेस फिर से शुरू होने के बाद सातों टूल पर लागू होता है; चर `OMEGA_SUITE_LANG` एक सत्र के लिए कोई भाषा अनिवार्य करता है। एक अलग सेटिंग, “निर्यात की भाषा”, सातों टूल की निर्यात रिपोर्टों की भाषा तय करती है। Linux टेक्स्ट कंसोल (TTY) पर गैर-लैटिन लिपि वाली भाषाएँ उस सत्र में अंग्रेज़ी में दिखती हैं। कमांड लाइन फ़्रेंच में ही रहती है।
+
+## संपर्क और सहायता
+
+सहायता (`a` कुंजी) में **संपर्क और सहायता** स्क्रीन है: *एक कॉफ़ी पिलाएँ* (डेवलपर का PayPal पेज), *सहायता से संपर्क करें* (ईमेल पता और साइट का संपर्क फ़ॉर्म, साफ़ दिखाए गए), *उपयोगकर्ता के रूप में पंजीकरण करें (अनाम)* और *अपडेट जाँचें*। पंजीकरण स्वैच्छिक है, डिफ़ॉल्ट रूप से बंद है और केवल एक बार भेजा जाता है: इसका उपयोग केवल उपयोगकर्ताओं की गिनती के लिए होता है और, यदि आप चाहें, उनके महाद्वीप या देश के लिए (बंद सूचियाँ, कभी मुक्त पाठ नहीं)। यह एक यादृच्छिक रूप से बनी कुंजी, सॉफ़्टवेयर का नाम (`omega-suite`) और उसका संस्करण भेजता है; कभी कोई नाम, मशीन का नाम, सेटिंग, लक्ष्य या परिणाम नहीं। IP पता पंजीकरणों में सहेजा नहीं जाता, लेकिन हर विज़िट की तरह यह प्राप्त करने वाले सर्वर की सुरक्षा जाँचों और लॉग से होकर गुज़रता है। उसी स्क्रीन से कभी भी वापस लिया जा सकता है (*अब मेरा पंजीकरण न करें*)। अपडेट जाँच केवल साइट पर प्रकाशित संस्करणों की सूची पढ़ती है, और कभी बिना क्लिक के नहीं। सूट में केवल एक पंजीकरण है, `omega-suite`, होम से भी और किसी टैब की सहायता से भी; अलग से चलाया गया टूल अपने नाम से पंजीकरण करता है।
 
 ## टर्मिनल संगतता
 

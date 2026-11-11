@@ -26,6 +26,13 @@
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) и [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 объединённых в едином TUI-приложении (сетка на Главном экране или постоянная панель вкладок — на выбор пользователя) с общей библиотекой [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ru/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ru/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ru/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ru/omega-suite/D.png" width="24%" />
+</p>
+
 
 Каждый инструмент по-прежнему полностью работает автономно
 (`omega-check scan ...` продолжает работать) - omega-suite - это
@@ -86,6 +93,10 @@ suite
 ## Языки интерфейса
 
 Интерфейс доступен на 17 языках. Язык выбирается в Настройках пакета («Langue / Language») и применяется ко всем 7 инструментам после перезапуска интерфейса; переменная `OMEGA_SUITE_LANG` задаёт язык на один сеанс. Отдельная настройка «Язык экспорта» определяет язык отчётов, экспортируемых 7 инструментами. В текстовой консоли Linux (TTY) языки с нелатинской письменностью на этот сеанс отображаются на английском. Командная строка остаётся на французском.
+
+## Контакты и поддержка
+
+Справка (клавиша `a`) предлагает экран **Контакты и поддержка**: *Угостить кофе* (страница PayPal разработчика), *Связаться с поддержкой* (адрес электронной почты и контактная форма сайта, показанные открыто), *Зарегистрироваться как пользователь (анонимно)* и *Проверить обновления*. Регистрация добровольная, по умолчанию отключена и отправляется только один раз: она служит лишь для подсчёта пользователей и, по желанию, их континента или страны (закрытые списки, никогда не свободный текст). Отправляются случайно сгенерированный ключ, название программы (`omega-suite`) и её версия; никогда имя, имя машины, настройка, цель или результат. IP-адрес не сохраняется в регистрациях, но, как при любом посещении, проходит через проверки безопасности и журнал принимающего сервера. Отозвать регистрацию можно в любой момент на том же экране (*Больше не регистрировать меня*). Проверка обновлений лишь читает список версий, опубликованных на сайте, и никогда без щелчка. В наборе одна регистрация, `omega-suite`, как с главного экрана, так и из справки вкладки; инструмент, запущенный отдельно, регистрируется под своим именем.
 
 ## Совместимость с терминалами
 

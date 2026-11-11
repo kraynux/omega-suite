@@ -26,6 +26,13 @@ Tangkapan layar → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-sca
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track), dan [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 disatukan dalam satu aplikasi TUI (kisi di layar utama atau bilah tab tetap, sesuai pilihan pengguna) dengan pustaka bersama [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/id/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/id/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/id/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/id/omega-suite/D.png" width="24%" />
+</p>
+
 
 Setiap alat tetap dapat dijalankan secara mandiri (`omega-check scan ...`
 tetap berfungsi) - omega-suite adalah fasad tambahan, bukan
@@ -86,6 +93,10 @@ suite
 ## Bahasa antarmuka
 
 Antarmuka tersedia dalam 17 bahasa. Pilihan dilakukan di Pengaturan suite (“Langue / Language”) dan berlaku untuk ke-7 alat setelah antarmuka dimulai ulang; variabel `OMEGA_SUITE_LANG` memaksakan satu bahasa selama satu sesi. Pengaturan terpisah, “Bahasa ekspor”, menentukan bahasa laporan yang diekspor ke-7 alat. Di konsol teks Linux (TTY), bahasa dengan aksara non-Latin ditampilkan dalam bahasa Inggris selama sesi itu. Baris perintah tetap dalam bahasa Prancis.
+
+## Kontak dan dukungan
+
+Bantuan (tombol `a`) menyediakan layar **Kontak dan dukungan**: *Traktir kopi* (halaman PayPal pengembang), *Hubungi dukungan* (alamat email dan formulir kontak situs, ditampilkan apa adanya), *Daftarkan saya sebagai pengguna (anonim)*, dan *Periksa pembaruan*. Pendaftaran bersifat sukarela, nonaktif secara bawaan, dan dikirim hanya sekali: hanya digunakan untuk menghitung pengguna dan, jika Anda mau, benua atau negara mereka (daftar tertutup, tidak pernah teks bebas). Yang dikirim adalah kunci yang diambil secara acak, nama perangkat lunak (`omega-suite`), dan versinya; tidak pernah nama, nama mesin, pengaturan, target, maupun hasil. Alamat IP tidak disimpan dalam pendaftaran, tetapi, seperti setiap kunjungan, melewati pemeriksaan keamanan dan log server penerima. Penarikan kapan saja dari layar yang sama (*Jangan daftarkan saya lagi*). Pemeriksaan pembaruan hanya membaca daftar versi yang dipublikasikan di situs, dan tidak pernah tanpa klik. Di dalam suite hanya ada satu pendaftaran, `omega-suite`, baik dari Beranda maupun dari bantuan sebuah tab; alat yang dijalankan sendiri mendaftar dengan namanya sendiri.
 
 ## Kompatibilitas terminal
 

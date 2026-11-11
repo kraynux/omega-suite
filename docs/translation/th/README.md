@@ -26,6 +26,13 @@
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) และ [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 รวมอยู่ในแอปพลิเคชัน TUI เดียว (ตารางปุ่มบนหน้าหลัก หรือแถบแท็บถาวร ตามที่ผู้ใช้เลือก) พร้อมไลบรารีที่ใช้ร่วมกัน [(`omega-lib`)](https://github.com/kraynux/omega-lib)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/th/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/th/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/th/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/th/omega-suite/D.png" width="24%" />
+</p>
+
 
 เครื่องมือแต่ละตัวยังรันแยกได้อย่างอิสระ (`omega-check scan ...`
 ยังใช้งานได้) - omega-suite เป็นส่วนหน้าเพิ่มเติม ไม่ใช่
@@ -86,6 +93,10 @@ suite
 ## ภาษาของอินเทอร์เฟซ
 
 อินเทอร์เฟซมีให้ใช้ 17 ภาษา เลือกได้ในการตั้งค่าของชุดเครื่องมือ (“Langue / Language”) และมีผลกับเครื่องมือทั้ง 7 หลังเริ่มอินเทอร์เฟซใหม่ ตัวแปร `OMEGA_SUITE_LANG` ใช้บังคับภาษาสำหรับหนึ่งเซสชัน การตั้งค่าแยกต่างหาก “ภาษาของการส่งออก” กำหนดภาษาของรายงานที่เครื่องมือทั้ง 7 ส่งออก บนคอนโซลข้อความของ Linux (TTY) ภาษาที่ไม่ใช้อักษรละตินจะแสดงเป็นภาษาอังกฤษในเซสชันนั้น บรรทัดคำสั่งยังคงเป็นภาษาฝรั่งเศส
+
+## ติดต่อและสนับสนุน
+
+ความช่วยเหลือ (ปุ่ม `a`) มีหน้าจอ **ติดต่อและสนับสนุน**: *เลี้ยงกาแฟ* (หน้า PayPal ของผู้พัฒนา), *ติดต่อฝ่ายสนับสนุน* (ที่อยู่อีเมลและแบบฟอร์มติดต่อของเว็บไซต์ แสดงเป็นข้อความธรรมดา), *ลงทะเบียนเป็นผู้ใช้ (นิรนาม)* และ *ตรวจสอบการอัปเดต* การลงทะเบียนเป็นไปโดยสมัครใจ ปิดไว้เป็นค่าเริ่มต้น และส่งเพียงครั้งเดียว ใช้เพื่อนับจำนวนผู้ใช้เท่านั้น และหากต้องการ นับทวีปหรือประเทศของผู้ใช้ (รายการปิด ไม่มีข้อความอิสระ) ระบบจะส่งคีย์ที่สุ่มขึ้น ชื่อซอฟต์แวร์ (`omega-suite`) และเวอร์ชัน ไม่ส่งชื่อ ชื่อเครื่อง การตั้งค่า เป้าหมาย หรือผลลัพธ์ใด ๆ ที่อยู่ IP จะไม่ถูกบันทึกในการลงทะเบียน แต่เช่นเดียวกับการเข้าชมทุกครั้ง จะผ่านการตรวจสอบความปลอดภัยและบันทึกของเซิร์ฟเวอร์ที่รับข้อมูล ถอนการลงทะเบียนได้ทุกเมื่อจากหน้าจอเดียวกัน (*ไม่ต้องลงทะเบียนฉันอีก*) การตรวจสอบการอัปเดตเพียงอ่านรายการเวอร์ชันที่เผยแพร่บนเว็บไซต์ และไม่ทำโดยไม่มีการคลิก ในชุดเครื่องมือมีการลงทะเบียนเพียงรายการเดียวคือ `omega-suite` ทั้งจากหน้าหลักและจากความช่วยเหลือของแท็บ ส่วนเครื่องมือที่เปิดแยกจะลงทะเบียนในชื่อของตัวเอง
 
 ## ความเข้ากันได้ของเทอร์มินัล
 

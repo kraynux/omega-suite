@@ -26,6 +26,13 @@ Schermafbeeldingen → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) en [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 samengebracht in één TUI-toepassing (raster op het startscherm of blijvende tabbalk, naar keuze van de gebruiker) met een gedeelde bibliotheek [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/nl/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/nl/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/nl/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/nl/omega-suite/D.png" width="24%" />
+</p>
+
 
 Elk hulpmiddel blijft zelfstandig uitvoerbaar (`omega-check scan ...`
 werkt nog steeds) - omega-suite is een extra façade, geen
@@ -86,6 +93,10 @@ suite
 ## Talen van de interface
 
 De interface is beschikbaar in 17 talen. De keuze gebeurt in de Instellingen van de suite (‘Langue / Language’) en geldt na een herstart van de interface voor alle 7 tools; de variabele `OMEGA_SUITE_LANG` dwingt een taal af voor één sessie. Een aparte instelling, ‘Taal van de exports’, bepaalt de taal van de rapporten die de 7 tools exporteren. Op een Linux-tekstconsole (TTY) worden talen met een niet-Latijns schrift voor die sessie in het Engels getoond. De opdrachtregel blijft in het Frans.
+
+## Contact en ondersteuning
+
+De hulp (toets `a`) biedt een scherm **Contact en ondersteuning**: *Trakteer op een koffie* (PayPal-pagina van de ontwikkelaar), *Contact opnemen met ondersteuning* (e-mailadres en contactformulier van de site, leesbaar weergegeven), *Mij aanmelden als gebruiker (anoniem)* en *Updates controleren*. De aanmelding is vrijwillig, standaard uitgeschakeld en wordt maar één keer verzonden: ze dient alleen om de gebruikers te tellen en, als u dat wilt, hun continent of land (gesloten lijsten, nooit vrije tekst). Ze verzendt een willekeurig gekozen sleutel, de naam van de software (`omega-suite`) en de versie; nooit een naam, een machinenaam, een instelling, een doel of een resultaat. Het IP-adres wordt niet opgeslagen in de aanmeldingen, maar gaat, zoals bij elk bezoek, door de beveiligingscontroles en het logboek van de ontvangende server. Intrekken kan op elk moment vanuit hetzelfde scherm (*Mij niet meer aanmelden*). De updatecontrole leest alleen de lijst van versies die op de site gepubliceerd zijn, en nooit zonder klik. In de suite is er één aanmelding, `omega-suite`, vanaf Start en vanuit de hulp van een tabblad; een los gestart hulpmiddel meldt zich onder zijn eigen naam aan.
 
 ## Terminalcompatibiliteit
 

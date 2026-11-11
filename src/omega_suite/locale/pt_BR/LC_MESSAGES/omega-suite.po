@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Omega-Status: testing\n"
+"X-Omega-Status: validated\n"
 
 #: src/omega_suite/app/clear_all_exports.py:66
 msgid "contient l'installation d'omega-suite"
@@ -27,15 +27,15 @@ msgstr "Ω OMEGA-SUITE"
 msgid "Chargement de {upper}..."
 msgstr "Carregando {upper}..."
 
-#: src/omega_suite/interfaces/tui/app.py:344
+#: src/omega_suite/interfaces/tui/app.py:347
 msgid "Ouvrir les réglages de la suite"
 msgstr "Abrir as configurações da suíte"
 
-#: src/omega_suite/interfaces/tui/app.py:345
+#: src/omega_suite/interfaces/tui/app.py:348
 msgid "Ouvrir l'aide"
 msgstr "Abrir a ajuda"
 
-#: src/omega_suite/interfaces/tui/app.py:347
+#: src/omega_suite/interfaces/tui/app.py:350
 msgid "Quitter omega-suite (avec confirmation)"
 msgstr "Sair do omega-suite (com confirmação)"
 
@@ -47,71 +47,71 @@ msgstr "SAIR"
 msgid "ACCUEIL"
 msgstr "INÍCIO"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
 msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
 msgstr "Ajuda (a da suíte no Início, a da ferramenta em uma aba)"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
 msgid "Réglages de la suite"
 msgstr "Configurações da suíte"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:25
 msgid "Quitter la suite (avec confirmation)"
 msgstr "Sair da suíte (com confirmação)"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:29
 msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
 msgstr "Observa a postura de segurança visível de um serviço HTTP/HTTPS: nenhum teste ativo."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:31
 msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
 msgstr "Descobre um alvo dentro de um perímetro controlado e depois testa ativamente seus pontos de entrada - nunca sem confirmação."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:33
 msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
 msgstr "Analisa um diretório local ou rastreia um site remoto com salvaguardas sempre ativas (profundidade, páginas, mesmo domínio)."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
 msgid "Testeur de charge de serveur."
 msgstr "Testador de carga de servidores."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:36
 msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
 msgstr "Identifica os serviços de um alvo único (scan fixo): nunca testes ativos nem tentativas de autenticação."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:38
 msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
 msgstr "Descobre e mapeia a arquitetura em torno de um alvo raiz: nada é escaneado sem validação explícita."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:40
 msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
 msgstr "Observa alvos registrados e autorizados explicitamente: nenhuma descoberta ou desvio automático."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
 msgid "AIDE DE LA SUITE"
 msgstr "AJUDA DA SUÍTE"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:62
 msgid "Navigation"
 msgstr "Navegação"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
 msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
 msgstr "Cada ferramenta é uma aba: escolhê-la (barra superior ou botão do Início) mostra instantaneamente suas próprias telas - a pilha de telas de cada ferramenta permanece intacta em segundo plano enquanto você não sair da suíte, nada se perde ao trocar de aba."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:71
 msgid "Stockage des exports"
 msgstr "Armazenamento das exportações"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:73
 msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
 msgstr "Cada ferramenta grava suas próprias exportações em var/<outil>/exports/ e suas capturas de tela em var/<outil>/screenshots/, relativo à pasta de onde o omega-suite foi iniciado (ou em $OMEGA_SUITE_VAR_DIR/<outil>/ se essa variável de ambiente estiver definida). Cada ferramenta pode redefinir sua própria pasta de destino em suas próprias Configurações. 'Limpar todas as exportações' (Configurações da suíte) esvazia essa pasta para as 7 ferramentas de uma vez, mesmo as nunca abertas nesta sessão."
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:83
 msgid "Périmètre des 7 outils"
 msgstr "Escopo das 7 ferramentas"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:87
 msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
 msgstr "O primeiríssimo carregamento de uma ferramenta (aba ou botão do Início) leva um instante, o tempo de carregá-la na memória - uma notificação avisa. As visitas seguintes a essa mesma ferramenta, no resto da sessão, são instantâneas."
 

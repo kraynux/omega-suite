@@ -26,6 +26,13 @@ Screenshots → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/sc
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) and [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 brought together in a single TUI application (Home grid or persistent tab bar, depending on the user's choice) with a shared library [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/en/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/en/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/en/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/en/omega-suite/D.png" width="24%" />
+</p>
+
 
 Each tool remains fully usable on its own (`omega-check scan ...`
 still works) - omega-suite is an additional facade, not a
@@ -86,6 +93,10 @@ suite
 ## Interface languages
 
 The interface is available in 17 languages. The choice is made in the suite Settings (“Langue / Language”) and applies to all 7 tools after the interface restarts; the `OMEGA_SUITE_LANG` variable forces a language for one session. A separate setting, “Export language”, sets the language of the reports exported by the 7 tools. On a Linux text console (TTY), languages with a non-Latin script are shown in English for the session. The command line stays in French.
+
+## Contact and support
+
+Help (`a` key) offers a **Contact and support** screen: *Buy me a coffee* (the developer's PayPal page), *Contact support* (email address and the site's contact form, shown in plain text), *Declare myself as a user (anonymous)* and *Check for updates*. The declaration is voluntary, off by default and sent only once: it is used only to count users and, if you wish, their continent or country (closed lists, never free text). It sends a randomly drawn key, the software name (`omega-suite`) and its version; never a name, a machine name, a setting, a target or a result. The IP address is not stored in the declarations, but, like any visit, it goes through the security checks and the log of the receiving server. You can withdraw at any time from the same screen (*Stop declaring me*). The update check only reads the list of versions published on the site, and never without a click. Within the suite there is a single declaration, `omega-suite`, from Home as well as from a tab's help; a tool launched on its own declares itself under its own name.
 
 ## Terminal compatibility
 

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "omega-suite"
-version = "1.5.0"
+version = "1.6.0"
 description = "Interface unifiee omega-suite : omega-scan/check/deep/fold/stress/track/fuzz en onglets d'une seule application"
 readme = "README.md"
 license = { file = "LICENSE" }

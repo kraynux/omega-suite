@@ -26,6 +26,13 @@ Screenshots → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/sc
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) und [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 vereint in einer einzigen TUI-Anwendung (Raster auf dem Startbildschirm oder dauerhafte Tab-Leiste, je nach Wahl des Benutzers) mit einer gemeinsamen Bibliothek [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/de/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/de/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/de/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/de/omega-suite/D.png" width="24%" />
+</p>
+
 
 Jedes Werkzeug bleibt eigenständig ausführbar (`omega-check scan ...`
 funktioniert weiterhin) - omega-suite ist eine zusätzliche Fassade, kein
@@ -86,6 +93,10 @@ suite
 ## Sprachen der Oberfläche
 
 Die Oberfläche ist in 17 Sprachen verfügbar. Die Wahl erfolgt in den Einstellungen der Suite („Langue / Language“) und gilt nach einem Neustart der Oberfläche für alle 7 Tools; die Variable `OMEGA_SUITE_LANG` erzwingt eine Sprache für eine Sitzung. Eine eigene Einstellung, „Sprache der Exporte“, legt die Sprache der von den 7 Tools exportierten Berichte fest. Auf einer Linux-Textkonsole (TTY) werden Sprachen mit nicht-lateinischer Schrift für die Sitzung auf Englisch angezeigt. Die Kommandozeile bleibt auf Französisch.
+
+## Kontakt und Support
+
+Die Hilfe (Taste `a`) bietet einen Bildschirm **Kontakt und Support**: *Einen Kaffee spendieren* (PayPal-Seite des Entwicklers), *Support kontaktieren* (E-Mail-Adresse und Kontaktformular der Website, im Klartext angezeigt), *Mich als Nutzer melden (anonym)* und *Updates prüfen*. Die Meldung ist freiwillig, standardmäßig deaktiviert und wird nur ein einziges Mal gesendet: Sie dient nur dazu, die Nutzer zu zählen und, wenn gewünscht, ihren Kontinent oder ihr Land (geschlossene Listen, nie Freitext). Gesendet werden ein zufällig gezogener Schlüssel, der Name der Software (`omega-suite`) und ihre Version; nie ein Name, ein Rechnername, eine Einstellung, ein Ziel oder ein Ergebnis. Die IP-Adresse wird in den Meldungen nicht gespeichert, durchläuft aber wie jeder Besuch die Sicherheitsprüfungen und das Protokoll des Empfangsservers. Rückzug jederzeit über denselben Bildschirm (*Mich nicht mehr melden*). Die Update-Prüfung liest nur die Liste der auf der Website veröffentlichten Versionen, und nie ohne Klick. In der Suite gibt es nur eine Meldung, `omega-suite`, von der Startseite wie aus der Hilfe eines Tabs; ein allein gestartetes Werkzeug meldet sich unter seinem eigenen Namen.
 
 ## Terminal-Kompatibilität
 

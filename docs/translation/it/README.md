@@ -26,6 +26,13 @@ Screenshot → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/scr
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) e [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 riuniti in un'unica applicazione TUI (griglia nella schermata iniziale o barra di schede persistente, a scelta dell'utente) con una libreria condivisa [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/it/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/it/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/it/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/it/omega-suite/D.png" width="24%" />
+</p>
+
 
 Ogni strumento resta eseguibile in modo autonomo (`omega-check scan ...`
 continua a funzionare) - omega-suite è una facciata aggiuntiva, non una
@@ -86,6 +93,10 @@ suite
 ## Lingue dell'interfaccia
 
 L'interfaccia è disponibile in 17 lingue. La scelta si fa nelle Impostazioni della suite («Langue / Language») e vale per i 7 strumenti dopo il riavvio dell'interfaccia; la variabile `OMEGA_SUITE_LANG` forza una lingua per una sessione. Un'impostazione a parte, «Lingua delle esportazioni», fissa la lingua dei report esportati dai 7 strumenti. Su una console di testo Linux (TTY), le lingue con scrittura non latina vengono mostrate in inglese per la sessione. La riga di comando resta in francese.
+
+## Contatti e supporto
+
+L'aiuto (tasto `a`) propone una schermata **Contatti e supporto**: *Offrire un caffè* (pagina PayPal dello sviluppatore), *Contattare il supporto* (indirizzo e-mail e modulo di contatto del sito, mostrati in chiaro), *Dichiararmi utente (anonimo)* e *Verifica aggiornamenti*. La dichiarazione è volontaria, disattivata per impostazione predefinita e inviata una sola volta: serve solo a contare gli utenti e, se lo si desidera, il loro continente o paese (elenchi chiusi, mai testo libero). Invia una chiave estratta a caso, il nome del software (`omega-suite`) e la sua versione; mai un nome, un nome di macchina, un'impostazione, un obiettivo o un risultato. L'indirizzo IP non viene registrato nelle dichiarazioni, ma, come per ogni visita, passa per i controlli di sicurezza e il registro del server di ricezione. Ritiro in qualsiasi momento dalla stessa schermata (*Non dichiararmi più*). La verifica degli aggiornamenti legge solo l'elenco delle versioni pubblicate sul sito, e mai senza un clic. Nella suite c'è un'unica dichiarazione, `omega-suite`, dalla Home come dall'aiuto di una scheda; uno strumento avviato da solo si dichiara con il proprio nome.
 
 ## Compatibilità dei terminali
 

@@ -321,16 +321,19 @@ class OmegaSuiteApp(App[None]):
         """Dispatch contextuel (D-014 point 10) : Aide de la suite depuis
         Accueil, Aide DE L'OUTIL ACTIF (classe inchangee) depuis un onglet."""
         if self.current_mode == "accueil":
-            self.push_screen(HelpScreen())
+            self.push_screen(HelpScreen(container=self._container))
             return
         if self.current_mode not in self._container.adapter_factories:
-            self.push_screen(HelpScreen())
+            self.push_screen(HelpScreen(container=self._container))
             return
         adapter = self._container.get_adapter(self.current_mode)
         import importlib
 
         help_module = importlib.import_module(f"{adapter.screens_package}.help_screen")
-        self.push_screen(help_module.HelpScreen())
+        # Contact et support (D-016, decision utilisateur 2026-11-09) : UNE seule declaration dans la
+        # suite, « omega-suite », meme depuis l'aide d'un onglet ; seul un outil lance a part se
+        # declare sous son propre nom (on sait ainsi qui se sert de la suite et qui des outils seuls).
+        self.push_screen(help_module.HelpScreen(container=self._container))
 
     def action_reglages(self) -> None:
         self.push_screen(SettingsScreen(container=self._container))

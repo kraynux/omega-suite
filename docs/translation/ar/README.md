@@ -26,6 +26,13 @@
 [omega-scan](https://github.com/kraynux/omega-scan) و[omega-check](https://github.com/kraynux/omega-check) و[omega-deep](https://github.com/kraynux/omega-deep) و[omega-fold](https://github.com/kraynux/omega-fold) و[omega-stress](https://github.com/kraynux/omega-stress) و[omega-track](https://github.com/kraynux/omega-track) و[omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 مجتمعة في تطبيق TUI واحد (شبكة أزرار في الشاشة الرئيسية أو شريط تبويبات دائم، حسب اختيار المستخدم) مع مكتبة مشتركة [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ar/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ar/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ar/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/ar/omega-suite/D.png" width="24%" />
+</p>
+
 
 تبقى كل أداة قابلة للتشغيل بشكل مستقل (`omega-check scan ...`
 ما زال يعمل) - فـ omega-suite واجهة إضافية، وليس
@@ -86,6 +93,10 @@ suite
 ## لغات الواجهة
 
 الواجهة متاحة بـ 17 لغة. يتم الاختيار في إعدادات الحزمة («Langue / Language») ويُطبَّق على الأدوات السبع بعد إعادة تشغيل الواجهة؛ ويفرض المتغيّر `OMEGA_SUITE_LANG` لغة طوال جلسة واحدة. ويحدّد إعداد منفصل، «لغة التصدير»، لغة التقارير التي تصدّرها الأدوات السبع. على وحدة التحكم النصية في Linux (TTY)، تُعرض اللغات ذات الكتابة غير اللاتينية بالإنجليزية طوال الجلسة. ويبقى سطر الأوامر بالفرنسية.
+
+## التواصل والدعم
+
+تتيح المساعدة (المفتاح `a`) شاشة **التواصل والدعم**: *ادفع ثمن قهوة* (صفحة PayPal الخاصة بالمطوّر)، و*التواصل مع الدعم* (عنوان البريد الإلكتروني ونموذج التواصل في الموقع، معروضان بوضوح)، و*تسجيلي كمستخدم (مجهول الهوية)* و*التحقق من التحديثات*. التسجيل اختياري، ومعطّل افتراضيًا، ويُرسل مرة واحدة فقط: يُستخدم فقط لإحصاء المستخدمين، وإن رغبت، قارتهم أو بلدهم (قوائم مغلقة، دون أي نص حر). يُرسل مفتاحًا مولَّدًا عشوائيًا واسم البرنامج (`omega-suite`) وإصداره؛ ولا يُرسل أبدًا اسمًا أو اسم جهاز أو إعدادًا أو هدفًا أو نتيجة. لا يُحفظ عنوان IP في التسجيلات، لكنه، كأي زيارة، يمر عبر فحوص الأمان وسجل الخادم المستقبِل. يمكن السحب في أي وقت من الشاشة نفسها (*إلغاء تسجيلي*). يقرأ التحقق من التحديثات قائمة الإصدارات المنشورة على الموقع فقط، ولا يحدث أبدًا دون نقرة. داخل الحزمة تسجيل واحد فقط هو `omega-suite`، من الصفحة الرئيسية ومن مساعدة أي تبويب؛ أما الأداة التي تُشغَّل وحدها فتُسجَّل باسمها.
 
 ## توافق الطرفيات
 

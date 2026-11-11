@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Omega-Status: testing\n"
+"X-Omega-Status: validated\n"
 
 #: src/omega_suite/app/clear_all_exports.py:66
 msgid "contient l'installation d'omega-suite"
@@ -27,15 +27,15 @@ msgstr "Ω OMEGA-SUITE"
 msgid "Chargement de {upper}..."
 msgstr "{upper} を読み込み中..."
 
-#: src/omega_suite/interfaces/tui/app.py:344
+#: src/omega_suite/interfaces/tui/app.py:347
 msgid "Ouvrir les réglages de la suite"
 msgstr "スイートの設定を開く"
 
-#: src/omega_suite/interfaces/tui/app.py:345
+#: src/omega_suite/interfaces/tui/app.py:348
 msgid "Ouvrir l'aide"
 msgstr "ヘルプを開く"
 
-#: src/omega_suite/interfaces/tui/app.py:347
+#: src/omega_suite/interfaces/tui/app.py:350
 msgid "Quitter omega-suite (avec confirmation)"
 msgstr "omega-suite を終了（確認あり）"
 
@@ -47,71 +47,71 @@ msgstr "終了"
 msgid "ACCUEIL"
 msgstr "ホーム"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:22
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
 msgid "Aide (celle de la suite depuis Accueil, celle de l'outil depuis un onglet)"
 msgstr "ヘルプ（ホームではスイートのヘルプ、タブではツールのヘルプ）"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:23
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
 msgid "Réglages de la suite"
 msgstr "スイートの設定"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:24
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:25
 msgid "Quitter la suite (avec confirmation)"
 msgstr "スイートを終了（確認あり）"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:28
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:29
 msgid "Observe la posture de sécurité visible d'un service HTTP/HTTPS : aucun test actif."
 msgstr "HTTP/HTTPS サービスの見えるセキュリティ状態を観察します：能動的なテストは一切行いません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:30
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:31
 msgid "Découvre une cible dans un périmètre contrôlé puis teste activement ses points d'entrée - jamais sans confirmation."
 msgstr "管理された範囲内でターゲットを探索し、その入口点を能動的にテストします — 確認なしには決して行いません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:32
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:33
 msgid "Analyse un répertoire local ou crawle un site distant sous des garde-fous toujours actifs (profondeur, pages, même domaine)."
 msgstr "常に有効なガードレール（深度、ページ数、同一ドメイン）のもとで、ローカルディレクトリを解析するかリモートサイトをクロールします。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:34
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
 msgid "Testeur de charge de serveur."
 msgstr "サーバー負荷テストツール。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:35
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:36
 msgid "Identifie les services d'une cible unique (scan fixe) : jamais de test actif ni d'authentification tentée."
 msgstr "単一ターゲットのサービスを識別します（固定スキャン）：能動的なテストも認証の試行も一切行いません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:37
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:38
 msgid "Découvre et cartographie l'architecture autour d'une cible racine : rien n'est scanné sans validation explicite."
 msgstr "ルートターゲット周辺のアーキテクチャを発見してマッピングします：明示的な承認なしには何もスキャンしません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:39
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:40
 msgid "Observe des cibles explicitement enregistrées et autorisées : aucune découverte ni dérive automatique."
 msgstr "明示的に登録・許可されたターゲットを観察します：自動的な発見や他ターゲットへの拡大は行いません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:48
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
 msgid "AIDE DE LA SUITE"
 msgstr "スイートのヘルプ"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:55
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:62
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:57
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
 msgid "Chaque outil est un onglet : le choisir (barre du haut ou bouton d'Accueil) affiche instantanément ses propres écrans - la pile d'écrans de chaque outil reste intacte en arrière-plan tant qu'on ne quitte pas la suite, rien n'est perdu en changeant d'onglet."
 msgstr "各ツールは 1 つのタブです：選択すると（上部バーまたはホームのボタン）そのツール自身の画面がすぐに表示されます — 各ツールの画面スタックはスイートを終了するまでバックグラウンドでそのまま保持され、タブを切り替えても何も失われません。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:64
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:71
 msgid "Stockage des exports"
 msgstr "エクスポートの保存先"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:66
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:73
 msgid "Chaque outil écrit ses propres exports dans var/<outil>/exports/ et ses captures d'écran dans var/<outil>/screenshots/, relatif au dossier où omega-suite a été lancé (ou sous $OMEGA_SUITE_VAR_DIR/<outil>/ si cette variable d'environnement est définie). Chaque outil peut redéfinir son propre dossier de destination depuis ses propres Réglages. 'Vider tous les exports' (Réglages de la suite) vide ce dossier pour les 7 outils d'un coup, même ceux jamais ouverts cette session."
 msgstr "各ツールは、omega-suite を起動したフォルダーを基準に、エクスポートを var/<outil>/exports/ に、スクリーンショットを var/<outil>/screenshots/ に書き込みます（環境変数 $OMEGA_SUITE_VAR_DIR が設定されている場合は $OMEGA_SUITE_VAR_DIR/<outil>/ 以下）。各ツールは自身の設定で保存先フォルダーを変更できます。「すべてのエクスポートを消去」（スイートの設定）は、このセッションで一度も開いていないツールも含め、7 つのツールすべてのこのフォルダーを一度に空にします。"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:76
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:83
 msgid "Périmètre des 7 outils"
 msgstr "7 つのツールの範囲"
 
-#: src/omega_suite/interfaces/tui/screens/help_screen.py:80
+#: src/omega_suite/interfaces/tui/screens/help_screen.py:87
 msgid "Le tout premier chargement d'un outil (onglet ou bouton d'Accueil) prend un court instant, le temps de le charger en mémoire - une notification l'indique. Les visites suivantes de ce même outil, le reste de la session, sont instantanées."
 msgstr "ツールを初めて読み込むとき（タブまたはホームのボタン）は、メモリに読み込むために少し時間がかかります — 通知でお知らせします。以降、セッションの残りの間は同じツールに即座にアクセスできます。"
 

@@ -10,10 +10,18 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from omega_lib.infrastructure.declaration import build_contact_support
+from omega_lib.infrastructure.declaration.app_version import project_version
+
 from omega_suite.app.dependency_container import DependencyContainer
 from omega_suite.app.tool_adapters import TOOL_ADAPTER_FACTORIES
 from omega_suite.infrastructure.config import paths
 from omega_suite.infrastructure.storage.json_settings_store import JsonSettingsStore
+
+SOFTWARE = "omega-suite"
+"""Nom du logiciel pour la reception des declarations et le site (download/)."""
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+"""Racine du projet : pyproject.toml, seule source de la version."""
 
 
 def bootstrap(*, var_dir: Path | None = None) -> DependencyContainer:
@@ -26,4 +34,5 @@ def bootstrap(*, var_dir: Path | None = None) -> DependencyContainer:
         adapter_factories=dict(TOOL_ADAPTER_FACTORIES),
         settings_store=settings_store,
         var_dir=base,
+        contact_support=build_contact_support(SOFTWARE, project_version(PROJECT_ROOT, SOFTWARE), base),
     )

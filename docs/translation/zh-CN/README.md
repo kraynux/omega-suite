@@ -26,6 +26,13 @@
 [omega-scan](https://github.com/kraynux/omega-scan)、[omega-check](https://github.com/kraynux/omega-check)、[omega-deep](https://github.com/kraynux/omega-deep)、[omega-fold](https://github.com/kraynux/omega-fold)、[omega-stress](https://github.com/kraynux/omega-stress)、[omega-track](https://github.com/kraynux/omega-track) 和 [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 被整合进单一的 TUI 应用中（首页网格或常驻标签栏，由用户自行选择），并共享同一个库 [(`omega-lib`)](https://github.com/kraynux/omega-lib)。
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/zh-CN/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/zh-CN/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/zh-CN/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/zh-CN/omega-suite/D.png" width="24%" />
+</p>
+
 
 每个工具依然可以完全独立运行（`omega-check scan ...` 照常可用）——
 omega-suite 只是一个附加门面，而非替代品。
@@ -85,6 +92,10 @@ suite
 ## 界面语言
 
 界面提供 17 种语言。在套件设置（“Langue / Language”）中选择，界面重启后应用于全部 7 个工具；变量 `OMEGA_SUITE_LANG` 可在一次会话中强制使用某种语言。单独的“导出语言”设置决定 7 个工具导出报告的语言。在 Linux 文本控制台（TTY）上，非拉丁文字的语言在该会话中以英文显示。命令行保持法语。
+
+## 联系与支持
+
+帮助（`a` 键）提供 **联系与支持** 界面：*请我喝杯咖啡*（开发者的 PayPal 页面）、*联系支持*（明文显示的电子邮件地址和网站联系表单）、*登记为用户（匿名）* 和 *检查更新*。 登记是自愿的，默认关闭，且只发送一次：仅用于统计用户数量，以及（如您愿意）其所在的大洲或国家（封闭列表，绝无自由文本）。它发送一个随机生成的密钥、软件名称（`omega-suite`）及其版本；绝不发送姓名、机器名称、设置、目标或结果。IP 地址不会记录在登记中，但与任何访问一样，会经过接收服务器的安全检查和日志。 可随时在同一界面撤回（*不再登记我*）。 检查更新仅读取网站上已发布版本的列表，且从不在未点击的情况下进行。 在套件中只有一个登记 `omega-suite`，无论从首页还是从标签页的帮助进入；单独启动的工具以自己的名称登记。
 
 ## 终端兼容性
 

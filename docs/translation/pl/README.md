@@ -26,6 +26,13 @@ Zrzuty ekranu → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-scan/
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) i [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 połączonych w jednej aplikacji TUI (siatka na ekranie głównym lub trwały pasek kart, zależnie od wyboru użytkownika) ze wspólną biblioteką [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pl/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pl/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pl/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pl/omega-suite/D.png" width="24%" />
+</p>
+
 
 Każde narzędzie nadal można uruchamiać samodzielnie (`omega-check scan ...`
 wciąż działa) - omega-suite jest dodatkową fasadą, a nie
@@ -86,6 +93,10 @@ suite
 ## Języki interfejsu
 
 Interfejs jest dostępny w 17 językach. Wybór odbywa się w Ustawieniach pakietu („Langue / Language”) i obowiązuje dla wszystkich 7 narzędzi po ponownym uruchomieniu interfejsu; zmienna `OMEGA_SUITE_LANG` wymusza język na czas jednej sesji. Osobne ustawienie, „Język eksportów”, określa język raportów eksportowanych przez 7 narzędzi. W tekstowej konsoli Linuksa (TTY) języki o piśmie niełacińskim są w tej sesji wyświetlane po angielsku. Wiersz poleceń pozostaje po francusku.
+
+## Kontakt i wsparcie
+
+Pomoc (klawisz `a`) oferuje ekran **Kontakt i wsparcie**: *Postaw kawę* (strona PayPal dewelopera), *Skontaktuj się ze wsparciem* (adres e-mail i formularz kontaktowy strony, wyświetlane jawnie), *Zgłoś mnie jako użytkownika (anonimowo)* oraz *Sprawdź aktualizacje*. Zgłoszenie jest dobrowolne, domyślnie wyłączone i wysyłane tylko raz: służy wyłącznie do liczenia użytkowników oraz, jeśli tego chcesz, ich kontynentu lub kraju (zamknięte listy, nigdy dowolny tekst). Wysyła losowo wygenerowany klucz, nazwę programu (`omega-suite`) i jego wersję; nigdy imienia i nazwiska, nazwy maszyny, ustawienia, celu ani wyniku. Adres IP nie jest zapisywany w zgłoszeniach, ale — jak przy każdej wizycie — przechodzi przez kontrole bezpieczeństwa i dziennik serwera odbiorczego. Wycofanie w dowolnym momencie z tego samego ekranu (*Nie zgłaszaj mnie więcej*). Sprawdzanie aktualizacji odczytuje jedynie listę wersji opublikowanych na stronie, i nigdy bez kliknięcia. W pakiecie jest jedno zgłoszenie, `omega-suite`, zarówno z ekranu głównego, jak i z pomocy karty; narzędzie uruchomione osobno zgłasza się pod własną nazwą.
 
 ## Zgodność terminali
 

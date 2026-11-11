@@ -26,6 +26,13 @@ Capturas de tela → [omega-scan](https://kraynux.snake-mackarel.ts.net/omega-sc
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) e [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 reunidas em um único aplicativo TUI (grade na tela inicial ou barra de abas persistente, conforme a escolha do usuário) com uma biblioteca compartilhada [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pt-BR/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pt-BR/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pt-BR/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/pt-BR/omega-suite/D.png" width="24%" />
+</p>
+
 
 Cada ferramenta continua executável de forma autônoma (`omega-check scan ...`
 continua funcionando) - o omega-suite é uma fachada adicional, não uma
@@ -86,6 +93,10 @@ suite
 ## Idiomas da interface
 
 A interface está disponível em 17 idiomas. A escolha é feita nas Configurações da suíte (“Langue / Language”) e vale para as 7 ferramentas após reiniciar a interface; a variável `OMEGA_SUITE_LANG` força um idioma durante uma sessão. Uma configuração separada, “Idioma das exportações”, define o idioma dos relatórios exportados pelas 7 ferramentas. Em um console de texto Linux (TTY), os idiomas de escrita não latina são exibidos em inglês durante a sessão. A linha de comando continua em francês.
+
+## Contato e suporte
+
+A ajuda (tecla `a`) oferece uma tela **Contato e suporte**: *Pagar um café* (página PayPal do desenvolvedor), *Contatar o suporte* (endereço de e-mail e formulário de contato do site, exibidos em claro), *Declarar-me usuário (anônimo)* e *Verificar atualizações*. A declaração é voluntária, desativada por padrão e enviada uma única vez: serve apenas para contar os usuários e, se desejado, seu continente ou país (listas fechadas, nunca texto livre). Ela envia uma chave sorteada ao acaso, o nome do software (`omega-suite`) e sua versão; nunca um nome, um nome de máquina, uma configuração, um alvo ou um resultado. O endereço IP não é registrado nas declarações, mas, como em qualquer visita, passa pelos controles de segurança e pelo registro do servidor de recepção. Retirada a qualquer momento na mesma tela (*Não me declarar mais*). A verificação de atualizações apenas lê a lista de versões publicadas no site, e nunca sem um clique. Na suíte há uma única declaração, `omega-suite`, tanto na Página inicial quanto na ajuda de uma aba; uma ferramenta iniciada sozinha se declara com seu próprio nome.
 
 ## Compatibilidade de terminais
 

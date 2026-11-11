@@ -26,6 +26,13 @@ Trang chính thức: [OMEGA-SUITE](https://kraynux.snake-mackarel.ts.net/omega-s
 [omega-scan](https://github.com/kraynux/omega-scan), [omega-check](https://github.com/kraynux/omega-check), [omega-deep](https://github.com/kraynux/omega-deep), [omega-fold](https://github.com/kraynux/omega-fold), [omega-stress](https://github.com/kraynux/omega-stress), [omega-track](https://github.com/kraynux/omega-track) và [omega-fuzz](https://github.com/kraynux/omega-fuzz)  
 được tập hợp trong một ứng dụng TUI duy nhất (lưới ở màn hình chính hoặc thanh tab cố định, tùy lựa chọn của người dùng) cùng một thư viện dùng chung [(`omega-lib`)](https://github.com/kraynux/omega-lib).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/vi/omega-suite/A.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/vi/omega-suite/B.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/vi/omega-suite/C.png" width="24%" />
+  <img src="https://raw.githubusercontent.com/kraynux/kraynux/refs/heads/main/docs/translation/vi/omega-suite/D.png" width="24%" />
+</p>
+
 
 Mỗi công cụ vẫn chạy được độc lập (`omega-check scan ...`
 vẫn hoạt động) - omega-suite là một lớp mặt tiền bổ sung, không phải
@@ -86,6 +93,10 @@ suite
 ## Ngôn ngữ giao diện
 
 Giao diện có 17 ngôn ngữ. Lựa chọn nằm trong Thiết lập của bộ công cụ (“Langue / Language”) và áp dụng cho cả 7 công cụ sau khi khởi động lại giao diện; biến `OMEGA_SUITE_LANG` buộc dùng một ngôn ngữ trong một phiên. Một thiết lập riêng, “Ngôn ngữ xuất”, quyết định ngôn ngữ của báo cáo do 7 công cụ xuất ra. Trên console văn bản Linux (TTY), các ngôn ngữ không dùng chữ Latinh được hiển thị bằng tiếng Anh trong phiên đó. Dòng lệnh vẫn bằng tiếng Pháp.
+
+## Liên hệ và hỗ trợ
+
+Phần trợ giúp (phím `a`) có màn hình **Liên hệ và hỗ trợ**: *Mời một ly cà phê* (trang PayPal của nhà phát triển), *Liên hệ hỗ trợ* (địa chỉ email và biểu mẫu liên hệ của trang web, hiển thị rõ ràng), *Khai báo là người dùng (ẩn danh)* và *Kiểm tra cập nhật*. Việc khai báo là tự nguyện, tắt theo mặc định và chỉ gửi một lần: nó chỉ dùng để đếm số người dùng và, nếu bạn muốn, châu lục hoặc quốc gia của họ (danh sách đóng, không bao giờ là văn bản tự do). Nó gửi một khóa được tạo ngẫu nhiên, tên phần mềm (`omega-suite`) và phiên bản của nó; không bao giờ gửi tên, tên máy, thiết lập, mục tiêu hay kết quả. Địa chỉ IP không được lưu trong các khai báo, nhưng, như mọi lượt truy cập, nó đi qua các kiểm tra bảo mật và nhật ký của máy chủ nhận. Có thể rút lại bất cứ lúc nào từ cùng màn hình (*Không khai báo tôi nữa*). Việc kiểm tra cập nhật chỉ đọc danh sách các phiên bản đã phát hành trên trang web, và không bao giờ khi chưa nhấp. Trong bộ công cụ chỉ có một khai báo, `omega-suite`, từ màn hình Chính cũng như từ trợ giúp của một thẻ; công cụ chạy riêng lẻ khai báo bằng tên riêng của nó.
 
 ## Khả năng tương thích terminal
 
